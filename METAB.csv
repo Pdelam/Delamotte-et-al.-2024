@@ -1,0 +1,2206 @@
+FBgn;CG;Gene;Group
+FBgn0000064;CG6058;;Glycolysis
+FBgn0000579;CG17654;;Glycolysis
+FBgn0001091;CG12055;;Glycolysis
+FBgn0001092;CG8893;;Glycolysis
+FBgn0001128;CG9042;;Glycolysis
+FBgn0001186;CG3001;;Glycolysis
+FBgn0001187;CG8094;;Glycolysis
+FBgn0001258;CG10160;;Glycolysis
+FBgn0003071;CG4001;;Glycolysis
+FBgn0003074;CG8251;;Glycolysis
+FBgn0003386;CG2822;;Glycolysis
+FBgn0004057;CG12529;;Glycolysis
+FBgn0004647;;;Glycolysis
+FBgn0010611;CG4311;;Glycolysis
+FBgn0011270;CG17645;;Glycolysis
+FBgn0014869;CG1721;;Glycolysis
+FBgn0015360;CG32300;;Glycolysis
+FBgn0025115;CG16870;;Glycolysis
+FBgn0025394;CG32810;;Glycolysis
+FBgn0027621;CG3400;;Glycolysis
+FBgn0029795;CG15773;;Glycolysis
+FBgn0030040;CG15347;;Glycolysis
+FBgn0030239;CG17333;;Glycolysis
+FBgn0030634;CG9164;;Glycolysis
+FBgn0031451;CG9961;;Glycolysis
+FBgn0031462;CG2964;;Glycolysis
+FBgn0031700;CG14022;;Glycolysis
+FBgn0031717;CG6957;;Glycolysis
+FBgn0031972;CG7221;;Glycolysis
+FBgn0032733;CG15170;;Glycolysis
+FBgn0032820;CG31692;;Glycolysis
+FBgn0033017;CG10465;;Glycolysis
+FBgn0033893;CG18371;;Glycolysis
+FBgn0034072;CG18250;;Glycolysis
+FBgn0034173;CG9010;;Glycolysis
+FBgn0034636;CG10440;;Glycolysis
+FBgn0034662;CG13492;;Glycolysis
+FBgn0034663;CG4363;;Glycolysis
+FBgn0034664;CG4377;;Glycolysis
+FBgn0035004;CG15874;;Glycolysis
+FBgn0035849;CG7404;;Glycolysis
+FBgn0036402;CG6650;;Glycolysis
+FBgn0036662;CG9706;;Glycolysis
+FBgn0036723;CG12229;;Glycolysis
+FBgn0037115;CG11249;;Glycolysis
+FBgn0037147;CG7140;;Glycolysis
+FBgn0037244;CG14647;;Glycolysis
+FBgn0037758;CG9467;;Glycolysis
+FBgn0038258;CG7362;;Glycolysis
+FBgn0038363;CG18505;;Glycolysis
+FBgn0038839;CG10830;;Glycolysis
+FBgn0038952;CG7069;;Glycolysis
+FBgn0038957;CG7059;;Glycolysis
+FBgn0039004;CG6958;;Glycolysis
+FBgn0039425;CG5432;;Glycolysis
+FBgn0039509;CG3350;;Glycolysis
+FBgn0039580;CG1345;;Glycolysis
+FBgn0040524;CG11052;;Glycolysis
+FBgn0042710;CG32849;;Glycolysis
+FBgn0042711;CG33102;;Glycolysis
+FBgn0046302;CG10650;;Glycolysis
+FBgn0054040;CG34040;;Glycolysis
+FBgn0085190;CG34161;;Glycolysis
+FBgn0085395;CG34366;;Glycolysis
+FBgn0086355;CG2171;;Glycolysis
+FBgn0250906;CG3127;;Glycolysis
+FBgn0262593;CG43128;;Glycolysis
+FBgn0262656;CG10798;;Glycolysis
+FBgn0265356;CG15105;;Glycolysis
+FBgn0267385;CG7070;;Glycolysis
+FBgn0287209;;;Glycolysis
+FBgn0001128;CG9042;Glycerol-3-phosphate dehydrogenase 1;Fermentation
+FBgn0000055;CG3481;Alcohol dehydrogenase;Fermentation
+FBgn0001258;CG10160;Lactate dehydrogenase;Fermentation
+FBgn0033856;CG13334;Orthologous to human LDHAL6A;Fermentation
+FBgn0000077;CG12127;;Phospholipid synthesis
+FBgn0000117;CG11579;;Phospholipid synthesis
+FBgn0000273;CG4379;;Phospholipid synthesis
+FBgn0001174;CG7428;;Phospholipid synthesis
+FBgn0001216;CG8937;;Phospholipid synthesis
+FBgn0001233;CG1242;;Phospholipid synthesis
+FBgn0002121;CG2671;;Phospholipid synthesis
+FBgn0002413;CG2048;;Phospholipid synthesis
+FBgn0002440;CG12755;;Phospholipid synthesis
+FBgn0002921;CG5670;;Phospholipid synthesis
+FBgn0003301;CG9533;;Phospholipid synthesis
+FBgn0003392;CG18102;;Phospholipid synthesis
+FBgn0003502;CG8049;;Phospholipid synthesis
+FBgn0003515;CG4314;;Phospholipid synthesis
+FBgn0003520;CG5753;;Phospholipid synthesis
+FBgn0003733;CG1389;;Phospholipid synthesis
+FBgn0003861;CG7875;;Phospholipid synthesis
+FBgn0003882;CG10520;;Phospholipid synthesis
+FBgn0003996;;;Phospholipid synthesis
+FBgn0003997;CG5123;;Phospholipid synthesis
+FBgn0004512;CG3879;;Phospholipid synthesis
+FBgn0004595;CG17228;;Phospholipid synthesis
+FBgn0004620;CG6992;;Phospholipid synthesis
+FBgn0004636;CG1956;;Phospholipid synthesis
+FBgn0004644;CG4637;;Phospholipid synthesis
+FBgn0004647;;;Phospholipid synthesis
+FBgn0004852;CG7978;;Phospholipid synthesis
+FBgn0004907;CG17870;;Phospholipid synthesis
+FBgn0004910;CG15855;;Phospholipid synthesis
+FBgn0005640;CG10579;;Phospholipid synthesis
+FBgn0010051;CG1063;;Phospholipid synthesis
+FBgn0010241;CG8523;;Phospholipid synthesis
+FBgn0010341;CG12530;;Phospholipid synthesis
+FBgn0010441;CG5974;;Phospholipid synthesis
+FBgn0011205;CG5725;;Phospholipid synthesis
+FBgn0011661;CG10701;;Phospholipid synthesis
+FBgn0011676;CG6713;;Phospholipid synthesis
+FBgn0013759;CG6703;;Phospholipid synthesis
+FBgn0014020;CG8416;;Phospholipid synthesis
+FBgn0014141;CG3937;;Phospholipid synthesis
+FBgn0015268;CG5330;;Phospholipid synthesis
+FBgn0015946;CG4345;;Phospholipid synthesis
+FBgn0016797;CG9739;;Phospholipid synthesis
+FBgn0017590;CG6669;;Phospholipid synthesis
+FBgn0019972;CG7788;;Phospholipid synthesis
+FBgn0020238;CG31196;;Phospholipid synthesis
+FBgn0020278;CG5248;;Phospholipid synthesis
+FBgn0020386;CG1210;;Phospholipid synthesis
+FBgn0023143;CG1782;;Phospholipid synthesis
+FBgn0023180;CG1584;;Phospholipid synthesis
+FBgn0023416;CG1506;;Phospholipid synthesis
+FBgn0024150;CG10564;;Phospholipid synthesis
+FBgn0024248;CG5686;;Phospholipid synthesis
+FBgn0024734;CG4993;;Phospholipid synthesis
+FBgn0026379;CG5671;;Phospholipid synthesis
+FBgn0026404;CG8091;;Phospholipid synthesis
+FBgn0026597;CG7926;;Phospholipid synthesis
+FBgn0026718;CG17608;;Phospholipid synthesis
+FBgn0027106;CG2977;;Phospholipid synthesis
+FBgn0027579;CG5508;;Phospholipid synthesis
+FBgn0030421;CG3812;;Phospholipid synthesis
+FBgn0030600;CG32592;;Phospholipid synthesis
+FBgn0030670;CG9245;;Phospholipid synthesis
+FBgn0031132;CG15450;;Phospholipid synthesis
+FBgn0031217;CG11377;;Phospholipid synthesis
+FBgn0031815;CG9526;;Phospholipid synthesis
+FBgn0032026;CG7627;;Phospholipid synthesis
+FBgn0032116;CG3759;;Phospholipid synthesis
+FBgn0032298;CG6724;;Phospholipid synthesis
+FBgn0032409;CG5336;;Phospholipid synthesis
+FBgn0032456;CG6214;;Phospholipid synthesis
+FBgn0032812;CG10263;;Phospholipid synthesis
+FBgn0033476;CG18445;;Phospholipid synthesis
+FBgn0033483;CG12919;;Phospholipid synthesis
+FBgn0034136;CG8380;;Phospholipid synthesis
+FBgn0034789;CG3682;;Phospholipid synthesis
+FBgn0034971;CG3209;;Phospholipid synthesis
+FBgn0035695;CG10226;;Phospholipid synthesis
+FBgn0036622;CG4753;;Phospholipid synthesis
+FBgn0036623;CG4729;;Phospholipid synthesis
+FBgn0037874;CG4800;;Phospholipid synthesis
+FBgn0038740;CG4562;;Phospholipid synthesis
+FBgn0038965;CG13852;;Phospholipid synthesis
+FBgn0039387;CG5959;;Phospholipid synthesis
+FBgn0050108;CG30108;;Phospholipid synthesis
+FBgn0050109;CG30109;;Phospholipid synthesis
+FBgn0050372;CG30372;;Phospholipid synthesis
+FBgn0052068;CG32068;;Phospholipid synthesis
+FBgn0052557;CG32557;;Phospholipid synthesis
+FBgn0052699;CG32699;;Phospholipid synthesis
+FBgn0087012;CG1056;;Phospholipid synthesis
+FBgn0087040;CG8308;;Phospholipid synthesis
+FBgn0250789;CG1977;;Phospholipid synthesis
+FBgn0250823;CG6963;;Phospholipid synthesis
+FBgn0250837;CG4584;;Phospholipid synthesis
+FBgn0259481;CG11711;;Phospholipid synthesis
+FBgn0259685;CG6383;;Phospholipid synthesis
+FBgn0260799;CG17484;;Phospholipid synthesis
+FBgn0261260;CG42611;;Phospholipid synthesis
+FBgn0261279;CG42250;;Phospholipid synthesis
+FBgn0261285;CG5629;;Phospholipid synthesis
+FBgn0261873;CG32717;;Phospholipid synthesis
+FBgn0261983;CG4713;;Phospholipid synthesis
+FBgn0262473;CG5490;;Phospholipid synthesis
+FBgn0263131;CG43373;;Phospholipid synthesis
+FBgn0264598;CG43947;;Phospholipid synthesis
+FBgn0264753;CG44011;;Phospholipid synthesis
+FBgn0265174;CG44239;;Phospholipid synthesis
+FBgn0266452;CG45070;;Phospholipid synthesis
+FBgn0266599;CG4264;;Phospholipid synthesis
+FBgn0283531;CG3131;;Phospholipid synthesis
+FBgn0283535;CG1088;;Phospholipid synthesis
+FBgn0284084;CG4889;;Phospholipid synthesis
+FBgn0284421;CG18803;;Phospholipid synthesis
+FBgn0286203;;;Phospholipid synthesis
+FBgn0286784;;;Phospholipid synthesis
+FBgn0001120;CG5272;;TCA
+FBgn0001248;CG7176;;TCA
+FBgn0001341;CG6189;;TCA
+FBgn0002719;CG10120;;TCA
+FBgn0003068;CG2647;;TCA
+FBgn0003575;CG6222;;TCA
+FBgn0003963;CG2762;;TCA
+FBgn0004888;CG1065;;TCA
+FBgn0010352;CG11661;;TCA
+FBgn0011217;CG7425;;TCA
+FBgn0011987;CR30024;;TCA
+FBgn0013680;CG34063;;TCA
+FBgn0013709;CR34064;;TCA
+FBgn0014028;CG3283;;TCA
+FBgn0015524;CG10036;;TCA
+FBgn0020236;CG8322;;TCA
+FBgn0020249;CG7954;;TCA
+FBgn0020270;CG16928;;TCA
+FBgn0020381;CG7486;;TCA
+FBgn0024957;CG6342;;TCA
+FBgn0024958;CG4900;;TCA
+FBgn0025741;CG11081;;TCA
+FBgn0025800;CG2262;;TCA
+FBgn0027291;CG12233;;TCA
+FBgn0027580;CG1516;;TCA
+FBgn0027610;CG8790;;TCA
+FBgn0029118;CG10622;;TCA
+FBgn0029153;CG7969;;TCA
+FBgn0029154;CG7964;;TCA
+FBgn0029155;CG5889;;TCA
+FBgn0029882;CG3226;;TCA
+FBgn0029885;CG3224;;TCA
+FBgn0029890;CG4095;;TCA
+FBgn0029891;CG4523;;TCA
+FBgn0030975;CG7349;;TCA
+FBgn0031981;CG7466;;TCA
+FBgn0032090;CG9582;;TCA
+FBgn0032358;CG4851;;TCA
+FBgn0032660;CG15150;;TCA
+FBgn0032922;CG9249;;TCA
+FBgn0032923;CG9248;;TCA
+FBgn0033233;CG15835;;TCA
+FBgn0033248;CG11196;;TCA
+FBgn0033528;CG11761;;TCA
+FBgn0034105;CG7755;;TCA
+FBgn0034127;CG7848;;TCA
+FBgn0034728;CG6339;;TCA
+FBgn0035005;CG3483;;TCA
+FBgn0035567;CG7514;;TCA
+FBgn0035568;CG18418;;TCA
+FBgn0036162;CG6140;;TCA
+FBgn0036222;CG5718;;TCA
+FBgn0036327;CG10748;;TCA
+FBgn0036328;CG10749;;TCA
+FBgn0036807;CG6893;;TCA
+FBgn0036927;CG7433;;TCA
+FBgn0037643;CG11963;;TCA
+FBgn0037668;CG16736;;TCA
+FBgn0037687;CG8132;;TCA
+FBgn0037860;CG6629;;TCA
+FBgn0037873;CG6666;;TCA
+FBgn0038437;CG14898;;TCA
+FBgn0038708;CG6255;;TCA
+FBgn0038797;CG4323;;TCA
+FBgn0038922;CG6439;;TCA
+FBgn0039112;CG10219;;TCA
+FBgn0039302;CG11856;;TCA
+FBgn0039358;CG5028;;TCA
+FBgn0039674;CG1907;;TCA
+FBgn0040383;CG5254;;TCA
+FBgn0051874;CG31874;;TCA
+FBgn0052026;CG32026;;TCA
+FBgn0052062;CG32062;;TCA
+FBgn0259099;CG42247;;TCA
+FBgn0260749;CG5640;;TCA
+FBgn0260750;CG31873;;TCA
+FBgn0260932;CG13190;;TCA
+FBgn0261439;CG17246;;TCA
+FBgn0261955;CG3861;;TCA
+FBgn0261976;CG18013;;TCA
+FBgn0261983;CG4713;;TCA
+FBgn0262388;CR42916;;TCA
+FBgn0262782;CG5362;;TCA
+FBgn0263049;CR43344;;TCA
+FBgn0264270;CG43770;;TCA
+FBgn0265177;CG44242;;TCA
+FBgn0267339;CG33338;;TCA
+FBgn0267967;CG8316;;TCA
+FBgn0286222;;;TCA
+FBgn0000014;CG10325;;amino acid synthesis
+FBgn0000015;CG11648;;amino acid synthesis
+FBgn0000022;CG3796;;amino acid synthesis
+FBgn0000028;CG9151;;amino acid synthesis
+FBgn0000042;CG4027;;amino acid synthesis
+FBgn0000047;CG5178;;amino acid synthesis
+FBgn0000063;CG7643;;amino acid synthesis
+FBgn0000075;CG10501;;amino acid synthesis
+FBgn0000077;CG12127;;amino acid synthesis
+FBgn0000097;CG3166;;amino acid synthesis
+FBgn0000100;CG7490;;amino acid synthesis
+FBgn0000114;CG31762;;amino acid synthesis
+FBgn0000117;CG11579;;amino acid synthesis
+FBgn0000137;CG3258;;amino acid synthesis
+FBgn0000157;CG3629;;amino acid synthesis
+FBgn0000166;CG1034;;amino acid synthesis
+FBgn0000173;CG18319;;amino acid synthesis
+FBgn0000179;CG3578;;amino acid synthesis
+FBgn0000212;CG5942;;amino acid synthesis
+FBgn0000229;CG5680;;amino acid synthesis
+FBgn0000250;CG5848;;amino acid synthesis
+FBgn0000251;CG1759;;amino acid synthesis
+FBgn0000256;CG3399;;amino acid synthesis
+FBgn0000259;CG15224;;amino acid synthesis
+FBgn0000273;CG4379;;amino acid synthesis
+FBgn0000274;CG12066;;amino acid synthesis
+FBgn0000283;CG6384;;amino acid synthesis
+FBgn0000286;CG11924;;amino acid synthesis
+FBgn0000287;CG4881;;amino acid synthesis
+FBgn0000289;CG8367;;amino acid synthesis
+FBgn0000307;CG5813;;amino acid synthesis
+FBgn0000320;CG9554;;amino acid synthesis
+FBgn0000337;CG1555;;amino acid synthesis
+FBgn0000351;CG11330;;amino acid synthesis
+FBgn0000370;CG8669;;amino acid synthesis
+FBgn0000376;CG2714;;amino acid synthesis
+FBgn0000377;CG3193;;amino acid synthesis
+FBgn0000392;CG11181;;amino acid synthesis
+FBgn0000405;CG3510;;amino acid synthesis
+FBgn0000411;;;amino acid synthesis
+FBgn0000422;CG10697;;amino acid synthesis
+FBgn0000427;CG2175;;amino acid synthesis
+FBgn0000439;CG2189;;amino acid synthesis
+FBgn0000448;CG33183;;amino acid synthesis
+FBgn0000449;CG12028;;amino acid synthesis
+FBgn0000459;CG9908;;amino acid synthesis
+FBgn0000492;CG1897;;amino acid synthesis
+FBgn0000504;CG11094;;amino acid synthesis
+FBgn0000520;CG2711;;amino acid synthesis
+FBgn0000524;CG3929;;amino acid synthesis
+FBgn0000527;;;amino acid synthesis
+FBgn0000541;CG32346;;amino acid synthesis
+FBgn0000543;CG5714;;amino acid synthesis
+FBgn0000546;CG1765;;amino acid synthesis
+FBgn0000551;CG7673;;amino acid synthesis
+FBgn0000552;CG2345;;amino acid synthesis
+FBgn0000557;CG1873;;amino acid synthesis
+FBgn0000559;CG2238;;amino acid synthesis
+FBgn0000567;CG32180;;amino acid synthesis
+FBgn0000575;CG1007;;amino acid synthesis
+FBgn0000576;CG2988;;amino acid synthesis
+FBgn0000577;CG9015;;amino acid synthesis
+FBgn0000581;CG7776;;amino acid synthesis
+FBgn0000588;CG14941;;amino acid synthesis
+FBgn0000606;CG2328;;amino acid synthesis
+FBgn0000611;CG8933;;amino acid synthesis
+FBgn0000618;CG15191;;amino acid synthesis
+FBgn0000625;CG10488;;amino acid synthesis
+FBgn0000629;CG6502;;amino acid synthesis
+FBgn0000659;CG10002;;amino acid synthesis
+FBgn0000662;CG6315;;amino acid synthesis
+FBgn0000709;CG1484;;amino acid synthesis
+FBgn0000711;CG2096;;amino acid synthesis
+FBgn0000826;CG11420;;amino acid synthesis
+FBgn0000964;CG10034;;amino acid synthesis
+FBgn0000996;CG8171;;amino acid synthesis
+FBgn0001077;CG2047;;amino acid synthesis
+FBgn0001078;CG4059;;amino acid synthesis
+FBgn0001120;CG5272;;amino acid synthesis
+FBgn0001133;CG33133;;amino acid synthesis
+FBgn0001139;CG8384;;amino acid synthesis
+FBgn0001142;CG2718;;amino acid synthesis
+FBgn0001147;CG2692;;amino acid synthesis
+FBgn0001148;CG3388;;amino acid synthesis
+FBgn0001150;CG7952;;amino acid synthesis
+FBgn0001168;;;amino acid synthesis
+FBgn0001174;CG7428;;amino acid synthesis
+FBgn0001179;CG8019;;amino acid synthesis
+FBgn0001180;CG9786;;amino acid synthesis
+FBgn0001195;;;amino acid synthesis
+FBgn0001196;;;amino acid synthesis
+FBgn0001197;CG5499;;amino acid synthesis
+FBgn0001200;;;amino acid synthesis
+FBgn0001206;CG1619;;amino acid synthesis
+FBgn0001208;CG7399;;amino acid synthesis
+FBgn0001215;CG9983;;amino acid synthesis
+FBgn0001216;CG8937;;amino acid synthesis
+FBgn0001218;CG4147;;amino acid synthesis
+FBgn0001222;CG5748;;amino acid synthesis
+FBgn0001229;CG4190;;amino acid synthesis
+FBgn0001230;CG5436;;amino acid synthesis
+FBgn0001233;CG1242;;amino acid synthesis
+FBgn0001235;CG17117;;amino acid synthesis
+FBgn0001276;CG13201;;amino acid synthesis
+FBgn0001291;CG2275;;amino acid synthesis
+FBgn0001297;CG33956;;amino acid synthesis
+FBgn0001311;CG2666;;amino acid synthesis
+FBgn0001321;CG6217;;amino acid synthesis
+FBgn0001325;CG3340;;amino acid synthesis
+FBgn0001491;CG1639;;amino acid synthesis
+FBgn0001942;CG9075;;amino acid synthesis
+FBgn0001978;CG3647;;amino acid synthesis
+FBgn0001990;CG4148;;amino acid synthesis
+FBgn0001994;CG7664;;amino acid synthesis
+FBgn0002023;CG10699;;amino acid synthesis
+FBgn0002044;CG10084;;amino acid synthesis
+FBgn0002069;CG3821;;amino acid synthesis
+FBgn0002121;CG2671;;amino acid synthesis
+FBgn0002183;CG1828;;amino acid synthesis
+FBgn0002283;CG4195;;amino acid synthesis
+FBgn0002284;CG4097;;amino acid synthesis
+FBgn0002354;CG7620;;amino acid synthesis
+FBgn0002413;CG2048;;amino acid synthesis
+FBgn0002440;CG12755;;amino acid synthesis
+FBgn0002441;CG5954;;amino acid synthesis
+FBgn0002521;CG17743;;amino acid synthesis
+FBgn0002522;CG1264;;amino acid synthesis
+FBgn0002525;CG6944;;amino acid synthesis
+FBgn0002531;CG11650;;amino acid synthesis
+FBgn0002533;CG8697;;amino acid synthesis
+FBgn0002534;CG2043;;amino acid synthesis
+FBgn0002535;CG2044;;amino acid synthesis
+FBgn0002542;CG2684;;amino acid synthesis
+FBgn0002552;CG11770;;amino acid synthesis
+FBgn0002562;CG2559;;amino acid synthesis
+FBgn0002563;CG4178;;amino acid synthesis
+FBgn0002564;CG6821;;amino acid synthesis
+FBgn0002565;CG6806;;amino acid synthesis
+FBgn0002567;CG8024;;amino acid synthesis
+FBgn0002573;CG32120;;amino acid synthesis
+FBgn0002576;CG1689;;amino acid synthesis
+FBgn0002590;CG8922;;amino acid synthesis
+FBgn0002593;CG4087;;amino acid synthesis
+FBgn0002631;CG6096;;amino acid synthesis
+FBgn0002638;CG10480;;amino acid synthesis
+FBgn0002643;CG8118;;amino acid synthesis
+FBgn0002673;CG4965;;amino acid synthesis
+FBgn0002707;CG3697;;amino acid synthesis
+FBgn0002709;CG8923;;amino acid synthesis
+FBgn0002715;CG5303;;amino acid synthesis
+FBgn0002723;CG1705;;amino acid synthesis
+FBgn0002733;CG14548;;amino acid synthesis
+FBgn0002735;CG8333;;amino acid synthesis
+FBgn0002736;CG9401;;amino acid synthesis
+FBgn0002774;CG11680;;amino acid synthesis
+FBgn0002775;CG8631;;amino acid synthesis
+FBgn0002781;CG32491;;amino acid synthesis
+FBgn0002783;CG18740;;amino acid synthesis
+FBgn0002838;CG14251;;amino acid synthesis
+FBgn0002878;CG11156;;amino acid synthesis
+FBgn0002899;CG7972;;amino acid synthesis
+FBgn0002901;CG7347;;amino acid synthesis
+FBgn0002905;CG6019;;amino acid synthesis
+FBgn0002906;CG6920;;amino acid synthesis
+FBgn0002909;CG8601;;amino acid synthesis
+FBgn0002914;CG9045;;amino acid synthesis
+FBgn0002921;CG5670;;amino acid synthesis
+FBgn0002922;CG10250;;amino acid synthesis
+FBgn0002924;CG7831;;amino acid synthesis
+FBgn0002926;CG10129;;amino acid synthesis
+FBgn0002931;CG11450;;amino acid synthesis
+FBgn0002936;CG3966;;amino acid synthesis
+FBgn0002937;CG9347;;amino acid synthesis
+FBgn0002938;CG5125;;amino acid synthesis
+FBgn0002939;CG31783;;amino acid synthesis
+FBgn0002940;CG4550;;amino acid synthesis
+FBgn0002941;CG6534;;amino acid synthesis
+FBgn0002945;CG11614;;amino acid synthesis
+FBgn0002962;CG5637;;amino acid synthesis
+FBgn0002989;CG3736;;amino acid synthesis
+FBgn0003002;CG1133;;amino acid synthesis
+FBgn0003009;CG3134;;amino acid synthesis
+FBgn0003015;CG10901;;amino acid synthesis
+FBgn0003028;CG6824;;amino acid synthesis
+FBgn0003041;CG8114;;amino acid synthesis
+FBgn0003042;CG32443;;amino acid synthesis
+FBgn0003044;CG5109;;amino acid synthesis
+FBgn0003046;CG3440;;amino acid synthesis
+FBgn0003053;CG12212;;amino acid synthesis
+FBgn0003068;CG2647;;amino acid synthesis
+FBgn0003087;CG5052;;amino acid synthesis
+FBgn0003089;CG9614;;amino acid synthesis
+FBgn0003116;CG3461;;amino acid synthesis
+FBgn0003117;CG3978;;amino acid synthesis
+FBgn0003118;CG17077;;amino acid synthesis
+FBgn0003124;CG12306;;amino acid synthesis
+FBgn0003129;CG9610;;amino acid synthesis
+FBgn0003130;CG8246;;amino acid synthesis
+FBgn0003145;CG6716;;amino acid synthesis
+FBgn0003165;CG9755;;amino acid synthesis
+FBgn0003189;;;amino acid synthesis
+FBgn0003227;CG31293;;amino acid synthesis
+FBgn0003231;CG10360;;amino acid synthesis
+FBgn0003254;CG7230;;amino acid synthesis
+FBgn0003256;CG12559;;amino acid synthesis
+FBgn0003267;CG6348;;amino acid synthesis
+FBgn0003270;CG10393;;amino acid synthesis
+FBgn0003274;CG4918;;amino acid synthesis
+FBgn0003277;CG1554;;amino acid synthesis
+FBgn0003300;CG1849;;amino acid synthesis
+FBgn0003301;CG9533;;amino acid synthesis
+FBgn0003302;CG4336;;amino acid synthesis
+FBgn0003312;CG14728;;amino acid synthesis
+FBgn0003321;CG1664;;amino acid synthesis
+FBgn0003330;CG5595;;amino acid synthesis
+FBgn0003334;CG9495;;amino acid synthesis
+FBgn0003339;CG1030;;amino acid synthesis
+FBgn0003345;CG8544;;amino acid synthesis
+FBgn0003346;CG9999;;amino acid synthesis
+FBgn0003371;CG2621;;amino acid synthesis
+FBgn0003377;CG18087;;amino acid synthesis
+FBgn0003392;CG18102;;amino acid synthesis
+FBgn0003396;CG7734;;amino acid synthesis
+FBgn0003410;CG9949;;amino acid synthesis
+FBgn0003411;CG1641;;amino acid synthesis
+FBgn0003415;CG9936;;amino acid synthesis
+FBgn0003430;CG16738;;amino acid synthesis
+FBgn0003448;CG3956;;amino acid synthesis
+FBgn0003449;CG4528;;amino acid synthesis
+FBgn0003459;CG3836;;amino acid synthesis
+FBgn0003460;CG11121;;amino acid synthesis
+FBgn0003475;CG10076;;amino acid synthesis
+FBgn0003479;CG7948;;amino acid synthesis
+FBgn0003480;CG3325;;amino acid synthesis
+FBgn0003483;CG3158;;amino acid synthesis
+FBgn0003495;CG6134;;amino acid synthesis
+FBgn0003502;CG8049;;amino acid synthesis
+FBgn0003507;CG3992;;amino acid synthesis
+FBgn0003512;CG17958;;amino acid synthesis
+FBgn0003513;CG6993;;amino acid synthesis
+FBgn0003520;CG5753;;amino acid synthesis
+FBgn0003525;CG1395;;amino acid synthesis
+FBgn0003545;CG12298;;amino acid synthesis
+FBgn0003559;CG17170;;amino acid synthesis
+FBgn0003567;CG8573;;amino acid synthesis
+FBgn0003575;CG6222;;amino acid synthesis
+FBgn0003598;CG8599;;amino acid synthesis
+FBgn0003607;CG8409;;amino acid synthesis
+FBgn0003612;CG8068;;amino acid synthesis
+FBgn0003687;CG9874;;amino acid synthesis
+FBgn0003721;CG4898;;amino acid synthesis
+FBgn0003733;CG1389;;amino acid synthesis
+FBgn0003742;CG10128;;amino acid synthesis
+FBgn0003744;CG8637;;amino acid synthesis
+FBgn0003861;CG7875;;amino acid synthesis
+FBgn0003862;CG8651;;amino acid synthesis
+FBgn0003866;CG1374;;amino acid synthesis
+FBgn0003870;CG1856;;amino acid synthesis
+FBgn0003882;CG10520;;amino acid synthesis
+FBgn0003884;CG1913;;amino acid synthesis
+FBgn0003891;CG9450;;amino acid synthesis
+FBgn0003896;CG10619;;amino acid synthesis
+FBgn0003900;CG2956;;amino acid synthesis
+FBgn0003941;CG2960;;amino acid synthesis
+FBgn0003942;CG5271;;amino acid synthesis
+FBgn0003944;CG10388;;amino acid synthesis
+FBgn0003963;CG2762;;amino acid synthesis
+FBgn0003964;CG4380;;amino acid synthesis
+FBgn0003965;;;amino acid synthesis
+FBgn0003975;CG3830;;amino acid synthesis
+FBgn0003977;CG3496;;amino acid synthesis
+FBgn0003978;CG10728;;amino acid synthesis
+FBgn0003980;CG9046;;amino acid synthesis
+FBgn0003996;;;amino acid synthesis
+FBgn0003997;CG5123;;amino acid synthesis
+FBgn0004050;;;amino acid synthesis
+FBgn0004053;CG1046;;amino acid synthesis
+FBgn0004066;CG3422;;amino acid synthesis
+FBgn0004087;CG14887;;amino acid synthesis
+FBgn0004101;CG3411;;amino acid synthesis
+FBgn0004102;CG12154;;amino acid synthesis
+FBgn0004103;CG5650;;amino acid synthesis
+FBgn0004106;CG5363;;amino acid synthesis
+FBgn0004107;CG10498;;amino acid synthesis
+FBgn0004110;CG7895;;amino acid synthesis
+FBgn0004169;CG7107;;amino acid synthesis
+FBgn0004198;CG11387;;amino acid synthesis
+FBgn0004227;CG4211;;amino acid synthesis
+FBgn0004237;CG12749;;amino acid synthesis
+FBgn0004362;CG17950;;amino acid synthesis
+FBgn0004363;CG6647;;amino acid synthesis
+FBgn0004367;CG4252;;amino acid synthesis
+FBgn0004372;CG2075;;amino acid synthesis
+FBgn0004378;CG9191;;amino acid synthesis
+FBgn0004379;CG10923;;amino acid synthesis
+FBgn0004394;CG12287;;amino acid synthesis
+FBgn0004396;CG7450;;amino acid synthesis
+FBgn0004400;CG10683;;amino acid synthesis
+FBgn0004406;CG8987;;amino acid synthesis
+FBgn0004407;CG33650;;amino acid synthesis
+FBgn0004436;CG2013;;amino acid synthesis
+FBgn0004510;CG6338;;amino acid synthesis
+FBgn0004513;CG10181;;amino acid synthesis
+FBgn0004567;CG2939;;amino acid synthesis
+FBgn0004584;CG3178;;amino acid synthesis
+FBgn0004587;CG10851;;amino acid synthesis
+FBgn0004595;CG17228;;amino acid synthesis
+FBgn0004606;CG1322;;amino acid synthesis
+FBgn0004618;CG7672;;amino acid synthesis
+FBgn0004620;CG6992;;amino acid synthesis
+FBgn0004636;CG1956;;amino acid synthesis
+FBgn0004644;CG4637;;amino acid synthesis
+FBgn0004647;;;amino acid synthesis
+FBgn0004652;CG14307;;amino acid synthesis
+FBgn0004655;CG3707;;amino acid synthesis
+FBgn0004656;CG2252;;amino acid synthesis
+FBgn0004666;CG7771;;amino acid synthesis
+FBgn0004698;CG8153;;amino acid synthesis
+FBgn0004777;CG2342;;amino acid synthesis
+FBgn0004778;CG1331;;amino acid synthesis
+FBgn0004779;CG1330;;amino acid synthesis
+FBgn0004780;CG2341;;amino acid synthesis
+FBgn0004781;CG1327;;amino acid synthesis
+FBgn0004782;CG1252;;amino acid synthesis
+FBgn0004783;CG2360;;amino acid synthesis
+FBgn0004795;CG5403;;amino acid synthesis
+FBgn0004828;CG8989;;amino acid synthesis
+FBgn0004837;CG3497;;amino acid synthesis
+FBgn0004838;CG10377;;amino acid synthesis
+FBgn0004858;CG4220;;amino acid synthesis
+FBgn0004859;CG2125;;amino acid synthesis
+FBgn0004860;CG3895;;amino acid synthesis
+FBgn0004861;CG18412;;amino acid synthesis
+FBgn0004863;CG7937;;amino acid synthesis
+FBgn0004872;CG6122;;amino acid synthesis
+FBgn0004876;CG6027;;amino acid synthesis
+FBgn0004882;CG10868;;amino acid synthesis
+FBgn0004889;CG6235;;amino acid synthesis
+FBgn0004893;CG10021;;amino acid synthesis
+FBgn0004895;CG1132;;amino acid synthesis
+FBgn0004901;CG2867;;amino acid synthesis
+FBgn0004907;CG17870;;amino acid synthesis
+FBgn0004910;CG15855;;amino acid synthesis
+FBgn0004914;CG9310;;amino acid synthesis
+FBgn0004924;CG6146;;amino acid synthesis
+FBgn0005198;CG6975;;amino acid synthesis
+FBgn0005355;CG6054;;amino acid synthesis
+FBgn0005386;CG8887;;amino acid synthesis
+FBgn0005411;CG9998;;amino acid synthesis
+FBgn0005427;CG3114;;amino acid synthesis
+FBgn0005558;CG1464;;amino acid synthesis
+FBgn0005561;CG11049;;amino acid synthesis
+FBgn0005596;CG14513;;amino acid synthesis
+FBgn0005612;CG3090;;amino acid synthesis
+FBgn0005613;CG8404;;amino acid synthesis
+FBgn0005624;CG3886;;amino acid synthesis
+FBgn0005626;CG10118;;amino acid synthesis
+FBgn0005632;CG1945;;amino acid synthesis
+FBgn0005636;CG3385;;amino acid synthesis
+FBgn0005638;CG4354;;amino acid synthesis
+FBgn0005640;CG10579;;amino acid synthesis
+FBgn0005642;CG1454;;amino acid synthesis
+FBgn0005648;CG2163;;amino acid synthesis
+FBgn0005655;CG9193;;amino acid synthesis
+FBgn0005658;CG7018;;amino acid synthesis
+FBgn0005659;CG5583;;amino acid synthesis
+FBgn0005660;CG2914;;amino acid synthesis
+FBgn0005674;CG5394;;amino acid synthesis
+FBgn0005677;CG4952;;amino acid synthesis
+FBgn0005683;CG5354;;amino acid synthesis
+FBgn0005695;CG8411;;amino acid synthesis
+FBgn0005771;CG4491;;amino acid synthesis
+FBgn0008651;CG6570;;amino acid synthesis
+FBgn0010051;CG1063;;amino acid synthesis
+FBgn0010097;CG17566;;amino acid synthesis
+FBgn0010109;CG8704;;amino acid synthesis
+FBgn0010247;CG40411;;amino acid synthesis
+FBgn0010263;CG3151;;amino acid synthesis
+FBgn0010278;CG4817;;amino acid synthesis
+FBgn0010280;CG5444;;amino acid synthesis
+FBgn0010287;CG7562;;amino acid synthesis
+FBgn0010300;CG10719;;amino acid synthesis
+FBgn0010303;CG4353;;amino acid synthesis
+FBgn0010313;CG2530;;amino acid synthesis
+FBgn0010316;CG1772;;amino acid synthesis
+FBgn0010328;CG5965;;amino acid synthesis
+FBgn0010341;CG12530;;amino acid synthesis
+FBgn0010355;CG17603;;amino acid synthesis
+FBgn0010379;CG4006;;amino acid synthesis
+FBgn0010382;CG3938;;amino acid synthesis
+FBgn0010411;CG8900;;amino acid synthesis
+FBgn0010416;CG9984;;amino acid synthesis
+FBgn0010417;CG32211;;amino acid synthesis
+FBgn0010431;CG18543;;amino acid synthesis
+FBgn0010433;CG7508;;amino acid synthesis
+FBgn0010441;CG5974;;amino acid synthesis
+FBgn0010602;CG3018;;amino acid synthesis
+FBgn0010803;CG9735;;amino acid synthesis
+FBgn0011206;CG4760;;amino acid synthesis
+FBgn0011207;CG3959;;amino acid synthesis
+FBgn0011217;CG7425;;amino acid synthesis
+FBgn0011224;CG31000;;amino acid synthesis
+FBgn0011225;CG5695;;amino acid synthesis
+FBgn0011274;CG6794;;amino acid synthesis
+FBgn0011278;CG6545;;amino acid synthesis
+FBgn0011291;CG4079;;amino acid synthesis
+FBgn0011296;CG4533;;amino acid synthesis
+FBgn0011474;CG3307;;amino acid synthesis
+FBgn0011586;CG1871;;amino acid synthesis
+FBgn0011604;CG8625;;amino acid synthesis
+FBgn0011606;CG8590;;amino acid synthesis
+FBgn0011638;CG10922;;amino acid synthesis
+FBgn0011640;CG8597;;amino acid synthesis
+FBgn0011648;CG12399;;amino acid synthesis
+FBgn0011656;CG1429;;amino acid synthesis
+FBgn0011661;CG10701;;amino acid synthesis
+FBgn0011666;CG5099;;amino acid synthesis
+FBgn0011676;CG6713;;amino acid synthesis
+FBgn0011692;CG1258;;amino acid synthesis
+FBgn0011701;CG31240;;amino acid synthesis
+FBgn0011715;CG1064;;amino acid synthesis
+FBgn0011723;CG7260;;amino acid synthesis
+FBgn0011725;CG31137;;amino acid synthesis
+FBgn0011737;CG4488;;amino acid synthesis
+FBgn0011754;CG1830;;amino acid synthesis
+FBgn0011758;CG5529;;amino acid synthesis
+FBgn0011761;CG4193;;amino acid synthesis
+FBgn0011763;CG4654;;amino acid synthesis
+FBgn0011766;CG6376;;amino acid synthesis
+FBgn0011774;CG5247;;amino acid synthesis
+FBgn0011817;CG7892;;amino acid synthesis
+FBgn0011836;CG6711;;amino acid synthesis
+FBgn0011837;CG4070;;amino acid synthesis
+FBgn0011840;CR31574;;amino acid synthesis
+FBgn0011844;CR32125;;amino acid synthesis
+FBgn0011845;CR31540;;amino acid synthesis
+FBgn0011848;CR30453;;amino acid synthesis
+FBgn0011849;CR30455;;amino acid synthesis
+FBgn0011850;CR30451;;amino acid synthesis
+FBgn0011851;CR32327;;amino acid synthesis
+FBgn0011852;CR32326;;amino acid synthesis
+FBgn0011853;CR32325;;amino acid synthesis
+FBgn0011854;CR32323;;amino acid synthesis
+FBgn0011855;CR32322;;amino acid synthesis
+FBgn0011858;CR31586;;amino acid synthesis
+FBgn0011859;CR31667;;amino acid synthesis
+FBgn0011860;CR31945;;amino acid synthesis
+FBgn0011861;CR31903;;amino acid synthesis
+FBgn0011862;CR31977;;amino acid synthesis
+FBgn0011863;CR31978;;amino acid synthesis
+FBgn0011864;CR31982;;amino acid synthesis
+FBgn0011865;CR31981;;amino acid synthesis
+FBgn0011866;CR31980;;amino acid synthesis
+FBgn0011867;CR30236;;amino acid synthesis
+FBgn0011868;CR30228;;amino acid synthesis
+FBgn0011869;CR30214;;amino acid synthesis
+FBgn0011870;CR30138;;amino acid synthesis
+FBgn0011871;CR30207;;amino acid synthesis
+FBgn0011872;CR30210;;amino acid synthesis
+FBgn0011878;CR30252;;amino acid synthesis
+FBgn0011879;CR30233;;amino acid synthesis
+FBgn0011880;CR30313;;amino acid synthesis
+FBgn0011881;CR32842;;amino acid synthesis
+FBgn0011882;CR30244;;amino acid synthesis
+FBgn0011883;CR30521;;amino acid synthesis
+FBgn0011884;CR30246;;amino acid synthesis
+FBgn0011885;CR30247;;amino acid synthesis
+FBgn0011887;CR30312;;amino acid synthesis
+FBgn0011888;CR30516;;amino acid synthesis
+FBgn0011889;CR30517;;amino acid synthesis
+FBgn0011890;CR30515;;amino acid synthesis
+FBgn0011891;CR32837;;amino acid synthesis
+FBgn0011892;CR30300;;amino acid synthesis
+FBgn0011893;CR30301;;amino acid synthesis
+FBgn0011894;CR30302;;amino acid synthesis
+FBgn0011895;CR30303;;amino acid synthesis
+FBgn0011896;CR30507;;amino acid synthesis
+FBgn0011897;CR30520;;amino acid synthesis
+FBgn0011902;CR31899;;amino acid synthesis
+FBgn0011904;CR31486;;amino acid synthesis
+FBgn0011905;CR31197;;amino acid synthesis
+FBgn0011906;CR30292;;amino acid synthesis
+FBgn0011909;CR32841;;amino acid synthesis
+FBgn0011910;CR30508;;amino acid synthesis
+FBgn0011915;CR30255;;amino acid synthesis
+FBgn0011916;CR32844;;amino acid synthesis
+FBgn0011919;CR31310;;amino acid synthesis
+FBgn0011921;CR30003;;amino acid synthesis
+FBgn0011927;CR32142;;amino acid synthesis
+FBgn0011928;CR32144;;amino acid synthesis
+FBgn0011931;CR30510;;amino acid synthesis
+FBgn0011932;CR30511;;amino acid synthesis
+FBgn0011933;CR30518;;amino acid synthesis
+FBgn0011934;CR30319;;amino acid synthesis
+FBgn0011935;CR30519;;amino acid synthesis
+FBgn0011936;CR33973;;amino acid synthesis
+FBgn0011937;CR33972;;amino acid synthesis
+FBgn0011938;CR30513;;amino acid synthesis
+FBgn0011944;CR31567;;amino acid synthesis
+FBgn0011945;CR31571;;amino acid synthesis
+FBgn0011948;CR32622;;amino acid synthesis
+FBgn0011949;CR32620;;amino acid synthesis
+FBgn0011950;CR32619;;amino acid synthesis
+FBgn0011951;CR32617;;amino acid synthesis
+FBgn0011952;CR32624;;amino acid synthesis
+FBgn0011953;CR32610;;amino acid synthesis
+FBgn0011954;CR32526;;amino acid synthesis
+FBgn0011955;CR30514;;amino acid synthesis
+FBgn0011956;CR30314;;amino acid synthesis
+FBgn0011957;CR30512;;amino acid synthesis
+FBgn0011958;CR30304;;amino acid synthesis
+FBgn0011959;CR31581;;amino acid synthesis
+FBgn0011960;CR31566;;amino acid synthesis
+FBgn0011961;CR31582;;amino acid synthesis
+FBgn0011962;CR31585;;amino acid synthesis
+FBgn0011963;CR31584;;amino acid synthesis
+FBgn0011965;CR31593;;amino acid synthesis
+FBgn0011966;CR31443;;amino acid synthesis
+FBgn0011970;CR31396;;amino acid synthesis
+FBgn0011971;CR31476;;amino acid synthesis
+FBgn0011974;CR32615;;amino acid synthesis
+FBgn0011975;CR32621;;amino acid synthesis
+FBgn0011976;CR32623;;amino acid synthesis
+FBgn0011977;CR32608;;amino acid synthesis
+FBgn0011980;CR32612;;amino acid synthesis
+FBgn0011981;CR32618;;amino acid synthesis
+FBgn0011982;CR32607;;amino acid synthesis
+FBgn0011983;CR32609;;amino acid synthesis
+FBgn0011984;CR31951;;amino acid synthesis
+FBgn0011985;CR31734;;amino acid synthesis
+FBgn0011986;CR32419;;amino acid synthesis
+FBgn0011987;CR30024;;amino acid synthesis
+FBgn0011993;CR31589;;amino acid synthesis
+FBgn0011994;CR31590;;amino acid synthesis
+FBgn0011998;CR31592;;amino acid synthesis
+FBgn0011999;CR31512;;amino acid synthesis
+FBgn0012000;CR31500;;amino acid synthesis
+FBgn0012001;CR31502;;amino acid synthesis
+FBgn0012002;CR31572;;amino acid synthesis
+FBgn0012003;CR31214;;amino acid synthesis
+FBgn0012004;CR31430;;amino acid synthesis
+FBgn0012016;CR31987;;amino acid synthesis
+FBgn0012017;CR31986;;amino acid synthesis
+FBgn0012018;CR31905;;amino acid synthesis
+FBgn0012024;CR31435;;amino acid synthesis
+FBgn0012025;CR31433;;amino acid synthesis
+FBgn0012026;CR31434;;amino acid synthesis
+FBgn0012027;CR31552;;amino acid synthesis
+FBgn0012028;CR31387;;amino acid synthesis
+FBgn0012058;CG8610;;amino acid synthesis
+FBgn0013263;CG33261;;amino acid synthesis
+FBgn0013275;CG31366;;amino acid synthesis
+FBgn0013276;CG18743;;amino acid synthesis
+FBgn0013277;CG31449;;amino acid synthesis
+FBgn0013278;CG31359;;amino acid synthesis
+FBgn0013279;CG6489;;amino acid synthesis
+FBgn0013323;CG13687;;amino acid synthesis
+FBgn0013435;CG1362;;amino acid synthesis
+FBgn0013469;CG12296;;amino acid synthesis
+FBgn0013672;CG34073;;amino acid synthesis
+FBgn0013674;CG34067;;amino acid synthesis
+FBgn0013675;CG34069;;amino acid synthesis
+FBgn0013689;CR34077;;amino acid synthesis
+FBgn0013700;CR34062;;amino acid synthesis
+FBgn0013707;CR34087;;amino acid synthesis
+FBgn0013708;CR34095;;amino acid synthesis
+FBgn0013710;CR34066;;amino acid synthesis
+FBgn0013717;CG4166;;amino acid synthesis
+FBgn0013751;CG1072;;amino acid synthesis
+FBgn0013753;CG7959;;amino acid synthesis
+FBgn0013756;CG8274;;amino acid synthesis
+FBgn0013759;CG6703;;amino acid synthesis
+FBgn0013762;CG8203;;amino acid synthesis
+FBgn0013764;CG3924;;amino acid synthesis
+FBgn0013799;CG8567;;amino acid synthesis
+FBgn0013983;CG5576;;amino acid synthesis
+FBgn0013987;CG3086;;amino acid synthesis
+FBgn0014018;CG11992;;amino acid synthesis
+FBgn0014020;CG8416;;amino acid synthesis
+FBgn0014022;CG8161;;amino acid synthesis
+FBgn0014037;CG32217;;amino acid synthesis
+FBgn0014127;CG10726;;amino acid synthesis
+FBgn0014141;CG3937;;amino acid synthesis
+FBgn0014143;CG5069;;amino acid synthesis
+FBgn0014179;CG12245;;amino acid synthesis
+FBgn0014189;CG7269;;amino acid synthesis
+FBgn0014340;CG3025;;amino acid synthesis
+FBgn0014343;CG10601;;amino acid synthesis
+FBgn0014391;CG9032;;amino acid synthesis
+FBgn0014396;CG3234;;amino acid synthesis
+FBgn0014857;CG5825;;amino acid synthesis
+FBgn0014859;CG1864;;amino acid synthesis
+FBgn0014931;CG2678;;amino acid synthesis
+FBgn0015024;CG2028;;amino acid synthesis
+FBgn0015239;CG7199;;amino acid synthesis
+FBgn0015245;CG12101;;amino acid synthesis
+FBgn0015247;CG8293;;amino acid synthesis
+FBgn0015270;CG3041;;amino acid synthesis
+FBgn0015283;CG7619;;amino acid synthesis
+FBgn0015320;CG6720;;amino acid synthesis
+FBgn0015321;CG8284;;amino acid synthesis
+FBgn0015360;CG32300;;amino acid synthesis
+FBgn0015371;CG11798;;amino acid synthesis
+FBgn0015376;CG33122;;amino acid synthesis
+FBgn0015396;CG4029;;amino acid synthesis
+FBgn0015509;CG1877;;amino acid synthesis
+FBgn0015550;CG7659;;amino acid synthesis
+FBgn0015602;CG10159;;amino acid synthesis
+FBgn0015618;CG10572;;amino acid synthesis
+FBgn0015625;CG5814;;amino acid synthesis
+FBgn0015664;CG5838;;amino acid synthesis
+FBgn0015721;CG9398;;amino acid synthesis
+FBgn0015765;CG5475;;amino acid synthesis
+FBgn0015799;CG7413;;amino acid synthesis
+FBgn0015805;CG7471;;amino acid synthesis
+FBgn0015903;CG5393;;amino acid synthesis
+FBgn0015904;CG10571;;amino acid synthesis
+FBgn0015919;CG10605;;amino acid synthesis
+FBgn0015925;CG3730;;amino acid synthesis
+FBgn0015946;CG4345;;amino acid synthesis
+FBgn0015949;CG9854;;amino acid synthesis
+FBgn0016034;CG11254;;amino acid synthesis
+FBgn0016076;CG14029;;amino acid synthesis
+FBgn0016120;CG6030;;amino acid synthesis
+FBgn0016131;CG5072;;amino acid synthesis
+FBgn0016694;CG17888;;amino acid synthesis
+FBgn0016696;CG4268;;amino acid synthesis
+FBgn0016698;CG3289;;amino acid synthesis
+FBgn0016756;CG5486;;amino acid synthesis
+FBgn0016797;CG9739;;amino acid synthesis
+FBgn0016917;CG4257;;amino acid synthesis
+FBgn0016930;CG4551;;amino acid synthesis
+FBgn0016977;CG18497;;amino acid synthesis
+FBgn0016978;CG8749;;amino acid synthesis
+FBgn0017418;CG5659;;amino acid synthesis
+FBgn0017424;CR11538;;amino acid synthesis
+FBgn0017456;CG12799;;amino acid synthesis
+FBgn0017457;CG3582;;amino acid synthesis
+FBgn0017551;CG10800;;amino acid synthesis
+FBgn0017567;CG3944;;amino acid synthesis
+FBgn0017572;CG4083;;amino acid synthesis
+FBgn0017577;CG4082;;amino acid synthesis
+FBgn0017578;CG9648;;amino acid synthesis
+FBgn0017581;CG17342;;amino acid synthesis
+FBgn0019637;CG1433;;amino acid synthesis
+FBgn0019662;CG8593;;amino acid synthesis
+FBgn0019686;CG10895;;amino acid synthesis
+FBgn0019809;CG3858;;amino acid synthesis
+FBgn0019949;CG5179;;amino acid synthesis
+FBgn0019960;CG6455;;amino acid synthesis
+FBgn0019972;CG7788;;amino acid synthesis
+FBgn0020238;CG31196;;amino acid synthesis
+FBgn0020255;CG1404;;amino acid synthesis
+FBgn0020261;CG3291;;amino acid synthesis
+FBgn0020270;CG16928;;amino acid synthesis
+FBgn0020272;CG1424;;amino acid synthesis
+FBgn0020279;CG8715;;amino acid synthesis
+FBgn0020307;CG5799;;amino acid synthesis
+FBgn0020309;CG14938;;amino acid synthesis
+FBgn0020378;CG1343;;amino acid synthesis
+FBgn0020386;CG1210;;amino acid synthesis
+FBgn0020388;CG4107;;amino acid synthesis
+FBgn0020407;CG6814;;amino acid synthesis
+FBgn0020412;CG6297;;amino acid synthesis
+FBgn0020443;CG6382;;amino acid synthesis
+FBgn0020493;CG5201;;amino acid synthesis
+FBgn0020496;CG7583;;amino acid synthesis
+FBgn0020497;CG13387;;amino acid synthesis
+FBgn0020513;CG3989;;amino acid synthesis
+FBgn0020521;CG3541;;amino acid synthesis
+FBgn0020618;CG7111;;amino acid synthesis
+FBgn0020637;CG10534;;amino acid synthesis
+FBgn0020638;CG10530;;amino acid synthesis
+FBgn0020639;CG10533;;amino acid synthesis
+FBgn0020640;CG10529;;amino acid synthesis
+FBgn0020641;CG6955;;amino acid synthesis
+FBgn0020642;CG6956;;amino acid synthesis
+FBgn0020643;CG18773;;amino acid synthesis
+FBgn0020644;CG32400;;amino acid synthesis
+FBgn0020645;CG7287;;amino acid synthesis
+FBgn0020660;CG10837;;amino acid synthesis
+FBgn0020765;CG10297;;amino acid synthesis
+FBgn0020887;CG8013;;amino acid synthesis
+FBgn0021750;CG4938;;amino acid synthesis
+FBgn0021760;CG32435;;amino acid synthesis
+FBgn0021796;CG5092;;amino acid synthesis
+FBgn0021872;CG9415;;amino acid synthesis
+FBgn0021875;CG3260;;amino acid synthesis
+FBgn0022023;CG9124;;amino acid synthesis
+FBgn0022361;CG1507;;amino acid synthesis
+FBgn0022740;CG5005;;amino acid synthesis
+FBgn0022786;CG12153;;amino acid synthesis
+FBgn0022936;CG7405;;amino acid synthesis
+FBgn0022942;CG7035;;amino acid synthesis
+FBgn0022959;CG5654;;amino acid synthesis
+FBgn0023023;CG1411;;amino acid synthesis
+FBgn0023076;CG7391;;amino acid synthesis
+FBgn0023091;CG8667;;amino acid synthesis
+FBgn0023094;CG8727;;amino acid synthesis
+FBgn0023097;CG5206;;amino acid synthesis
+FBgn0023143;CG1782;;amino acid synthesis
+FBgn0023167;CG8427;;amino acid synthesis
+FBgn0023169;CG3051;;amino acid synthesis
+FBgn0023171;CG8729;;amino acid synthesis
+FBgn0023174;CG3329;;amino acid synthesis
+FBgn0023180;CG1584;;amino acid synthesis
+FBgn0023181;CG2917;;amino acid synthesis
+FBgn0023215;CG13316;;amino acid synthesis
+FBgn0023216;CG2864;;amino acid synthesis
+FBgn0023395;CG9594;;amino acid synthesis
+FBgn0023441;CG8205;;amino acid synthesis
+FBgn0023489;CG2819;;amino acid synthesis
+FBgn0023509;CG3480;;amino acid synthesis
+FBgn0023515;CG14814;;amino acid synthesis
+FBgn0023518;CG3848;;amino acid synthesis
+FBgn0023528;CG2924;;amino acid synthesis
+FBgn0023536;CG3156;;amino acid synthesis
+FBgn0023542;CG3460;;amino acid synthesis
+FBgn0023545;CG4406;;amino acid synthesis
+FBgn0024248;CG5686;;amino acid synthesis
+FBgn0024249;CG7760;;amino acid synthesis
+FBgn0024250;CG9653;;amino acid synthesis
+FBgn0024251;CG1414;;amino acid synthesis
+FBgn0024273;CG1520;;amino acid synthesis
+FBgn0024288;CG15552;;amino acid synthesis
+FBgn0024291;CG5216;;amino acid synthesis
+FBgn0024364;CG11417;;amino acid synthesis
+FBgn0024371;CG1071;;amino acid synthesis
+FBgn0024510;CG32315;;amino acid synthesis
+FBgn0024555;CG9351;;amino acid synthesis
+FBgn0024556;CG6050;;amino acid synthesis
+FBgn0024734;CG4993;;amino acid synthesis
+FBgn0024846;CG7393;;amino acid synthesis
+FBgn0024889;CG8548;;amino acid synthesis
+FBgn0024921;CG7398;;amino acid synthesis
+FBgn0024957;CG6342;;amino acid synthesis
+FBgn0024958;CG4900;;amino acid synthesis
+FBgn0025118;CR32784;;amino acid synthesis
+FBgn0025355;CG7869;;amino acid synthesis
+FBgn0025360;CG18455;;amino acid synthesis
+FBgn0025578;CG16914;;amino acid synthesis
+FBgn0025625;CG4290;;amino acid synthesis
+FBgn0025635;CG17829;;amino acid synthesis
+FBgn0025637;CG16983;;amino acid synthesis
+FBgn0025638;CG16982;;amino acid synthesis
+FBgn0025680;CG3772;;amino acid synthesis
+FBgn0025682;CG9148;;amino acid synthesis
+FBgn0025702;CG11489;;amino acid synthesis
+FBgn0025776;CG11551;;amino acid synthesis
+FBgn0025790;CG10327;;amino acid synthesis
+FBgn0025800;CG2262;;amino acid synthesis
+FBgn0025815;CG4039;;amino acid synthesis
+FBgn0025825;CG2128;;amino acid synthesis
+FBgn0026015;CG3458;;amino acid synthesis
+FBgn0026079;CG6133;;amino acid synthesis
+FBgn0026080;CG6121;;amino acid synthesis
+FBgn0026083;CG4857;;amino acid synthesis
+FBgn0026086;CG12598;;amino acid synthesis
+FBgn0026143;CG3658;;amino acid synthesis
+FBgn0026162;CR31490;;amino acid synthesis
+FBgn0026163;CR31487;;amino acid synthesis
+FBgn0026164;CR31489;;amino acid synthesis
+FBgn0026199;CG1838;;amino acid synthesis
+FBgn0026238;CG2944;;amino acid synthesis
+FBgn0026252;CG7935;;amino acid synthesis
+FBgn0026257;CG6219;;amino acid synthesis
+FBgn0026316;CG5788;;amino acid synthesis
+FBgn0026324;CG3069;;amino acid synthesis
+FBgn0026379;CG5671;;amino acid synthesis
+FBgn0026380;CG11981;;amino acid synthesis
+FBgn0026401;CG17704;;amino acid synthesis
+FBgn0026404;CG8091;;amino acid synthesis
+FBgn0026418;CG6603;;amino acid synthesis
+FBgn0026479;CG3210;;amino acid synthesis
+FBgn0026582;CG9418;;amino acid synthesis
+FBgn0026597;CG7926;;amino acid synthesis
+FBgn0026598;CG6193;;amino acid synthesis
+FBgn0026722;CG8730;;amino acid synthesis
+FBgn0026741;CG12373;;amino acid synthesis
+FBgn0026761;CG3152;;amino acid synthesis
+FBgn0027079;CG4062;;amino acid synthesis
+FBgn0027080;CG4561;;amino acid synthesis
+FBgn0027081;CG5353;;amino acid synthesis
+FBgn0027082;CG12186;;amino acid synthesis
+FBgn0027083;CG31322;;amino acid synthesis
+FBgn0027084;CG12141;;amino acid synthesis
+FBgn0027085;CG7479;;amino acid synthesis
+FBgn0027086;CG11471;;amino acid synthesis
+FBgn0027087;CG6335;;amino acid synthesis
+FBgn0027088;CG6778;;amino acid synthesis
+FBgn0027090;CG10506;;amino acid synthesis
+FBgn0027091;CG8431;;amino acid synthesis
+FBgn0027093;CG9020;;amino acid synthesis
+FBgn0027094;CG13391;;amino acid synthesis
+FBgn0027101;CG40478;;amino acid synthesis
+FBgn0027338;CG9423;;amino acid synthesis
+FBgn0027364;CG3871;;amino acid synthesis
+FBgn0027492;CG5643;;amino acid synthesis
+FBgn0027504;CG8878;;amino acid synthesis
+FBgn0027508;CG4719;;amino acid synthesis
+FBgn0027548;CG2910;;amino acid synthesis
+FBgn0027560;CG4104;;amino acid synthesis
+FBgn0027572;CG5009;;amino acid synthesis
+FBgn0027579;CG5508;;amino acid synthesis
+FBgn0027592;CG4184;;amino acid synthesis
+FBgn0027609;CG15437;;amino acid synthesis
+FBgn0027620;CG1966;;amino acid synthesis
+FBgn0027780;CG13401;;amino acid synthesis
+FBgn0027788;CG11194;;amino acid synthesis
+FBgn0027794;CG14786;;amino acid synthesis
+FBgn0027835;CG5170;;amino acid synthesis
+FBgn0027836;CG5729;;amino acid synthesis
+FBgn0027868;CG6743;;amino acid synthesis
+FBgn0027889;CG6386;;amino acid synthesis
+FBgn0028360;CG32742;;amino acid synthesis
+FBgn0028375;CG5876;;amino acid synthesis
+FBgn0028387;CG5229;;amino acid synthesis
+FBgn0028410;CG5182;;amino acid synthesis
+FBgn0028411;CG12752;;amino acid synthesis
+FBgn0028426;CG3298;;amino acid synthesis
+FBgn0028515;CG4930;;amino acid synthesis
+FBgn0028550;CG11405;;amino acid synthesis
+FBgn0028707;CG10692;;amino acid synthesis
+FBgn0028734;CG6203;;amino acid synthesis
+FBgn0028737;CG6341;;amino acid synthesis
+FBgn0028871;CG3474;;amino acid synthesis
+FBgn0028882;CR31985;;amino acid synthesis
+FBgn0028889;CR31831;;amino acid synthesis
+FBgn0028909;CR31838;;amino acid synthesis
+FBgn0028910;CR31984;;amino acid synthesis
+FBgn0028911;CR31979;;amino acid synthesis
+FBgn0028912;CR31983;;amino acid synthesis
+FBgn0028913;CG3473;;amino acid synthesis
+FBgn0028962;CG4633;;amino acid synthesis
+FBgn0028978;CG5408;;amino acid synthesis
+FBgn0028979;CG12630;;amino acid synthesis
+FBgn0028980;CG6586;;amino acid synthesis
+FBgn0028981;CR30224;;amino acid synthesis
+FBgn0028990;CG11331;;amino acid synthesis
+FBgn0028991;CG32904;;amino acid synthesis
+FBgn0028996;CG1922;;amino acid synthesis
+FBgn0028999;CG13906;;amino acid synthesis
+FBgn0029094;CG9383;;amino acid synthesis
+FBgn0029123;CG18024;;amino acid synthesis
+FBgn0029176;CG11901;;amino acid synthesis
+FBgn0029502;CG14437;;amino acid synthesis
+FBgn0029629;CG8636;;amino acid synthesis
+FBgn0029664;CG10802;;amino acid synthesis
+FBgn0029693;CG6379;;amino acid synthesis
+FBgn0029752;CG3315;;amino acid synthesis
+FBgn0029798;CG4078;;amino acid synthesis
+FBgn0029811;CG4052;;amino acid synthesis
+FBgn0029818;CG3033;;amino acid synthesis
+FBgn0029823;CG3011;;amino acid synthesis
+FBgn0029870;CG3869;;amino acid synthesis
+FBgn0029891;CG4523;;amino acid synthesis
+FBgn0029905;CG3075;;amino acid synthesis
+FBgn0029906;CG4542;;amino acid synthesis
+FBgn0029970;CG17256;;amino acid synthesis
+FBgn0029992;CG2253;;amino acid synthesis
+FBgn0029996;CG2257;;amino acid synthesis
+FBgn0030007;CG2263;;amino acid synthesis
+FBgn0030035;CG11190;;amino acid synthesis
+FBgn0030054;CG12109;;amino acid synthesis
+FBgn0030092;CG8971;;amino acid synthesis
+FBgn0030093;CG7055;;amino acid synthesis
+FBgn0030096;CG9060;;amino acid synthesis
+FBgn0030366;CG1490;;amino acid synthesis
+FBgn0030384;CG2577;;amino acid synthesis
+FBgn0030386;CG2574;;amino acid synthesis
+FBgn0030394;CG2560;;amino acid synthesis
+FBgn0030398;CG2555;;amino acid synthesis
+FBgn0030486;CG1716;;amino acid synthesis
+FBgn0030494;CG15757;;amino acid synthesis
+FBgn0030530;CG11063;;amino acid synthesis
+FBgn0030552;CG15871;;amino acid synthesis
+FBgn0030556;CG1810;;amino acid synthesis
+FBgn0030600;CG32592;;amino acid synthesis
+FBgn0030657;CG15645;;amino acid synthesis
+FBgn0030660;CG8097;;amino acid synthesis
+FBgn0030674;CG8184;;amino acid synthesis
+FBgn0030697;CG8565;;amino acid synthesis
+FBgn0030753;CG4420;;amino acid synthesis
+FBgn0030800;CG9104;;amino acid synthesis
+FBgn0030812;CG8949;;amino acid synthesis
+FBgn0030863;CG8188;;amino acid synthesis
+FBgn0030891;CG7098;;amino acid synthesis
+FBgn0030974;CG7358;;amino acid synthesis
+FBgn0031091;CG9576;;amino acid synthesis
+FBgn0031232;CG11617;;amino acid synthesis
+FBgn0031267;CG13688;;amino acid synthesis
+FBgn0031312;CG4775;;amino acid synthesis
+FBgn0031331;CG5440;;amino acid synthesis
+FBgn0031375;CG31670;;amino acid synthesis
+FBgn0031392;CG7263;;amino acid synthesis
+FBgn0031399;CG7074;;amino acid synthesis
+FBgn0031420;CG9866;;amino acid synthesis
+FBgn0031441;CG9962;;amino acid synthesis
+FBgn0031442;CG17301;;amino acid synthesis
+FBgn0031443;CG17302;;amino acid synthesis
+FBgn0031467;CG2973;;amino acid synthesis
+FBgn0031497;CG17259;;amino acid synthesis
+FBgn0031604;CG15433;;amino acid synthesis
+FBgn0031611;CG17840;;amino acid synthesis
+FBgn0031643;CG3008;;amino acid synthesis
+FBgn0031655;CG3753;;amino acid synthesis
+FBgn0031661;CG8890;;amino acid synthesis
+FBgn0031696;CG14030;;amino acid synthesis
+FBgn0031730;CG7236;;amino acid synthesis
+FBgn0031759;CG9088;;amino acid synthesis
+FBgn0031851;CG11188;;amino acid synthesis
+FBgn0031853;CG11201;;amino acid synthesis
+FBgn0031855;CG11221;;amino acid synthesis
+FBgn0031896;CG4502;;amino acid synthesis
+FBgn0031951;CG7138;;amino acid synthesis
+FBgn0032016;CG7818;;amino acid synthesis
+FBgn0032052;CG13089;;amino acid synthesis
+FBgn0032078;CG9520;;amino acid synthesis
+FBgn0032089;CG9573;;amino acid synthesis
+FBgn0032125;CG3818;;amino acid synthesis
+FBgn0032198;CG4912;;amino acid synthesis
+FBgn0032202;CG18619;;amino acid synthesis
+FBgn0032209;CG18144;;amino acid synthesis
+FBgn0032223;CG5034;;amino acid synthesis
+FBgn0032250;CG5198;;amino acid synthesis
+FBgn0032368;CG6589;;amino acid synthesis
+FBgn0032393;CG12264;;amino acid synthesis
+FBgn0032409;CG5336;;amino acid synthesis
+FBgn0032473;CG5204;;amino acid synthesis
+FBgn0032475;CG16975;;amino acid synthesis
+FBgn0032492;CG5648;;amino acid synthesis
+FBgn0032516;CG9293;;amino acid synthesis
+FBgn0032517;CG7099;;amino acid synthesis
+FBgn0032596;CG17331;;amino acid synthesis
+FBgn0032646;CG6412;;amino acid synthesis
+FBgn0032650;CG7094;;amino acid synthesis
+FBgn0032651;CG5545;;amino acid synthesis
+FBgn0032671;CG7200;;amino acid synthesis
+FBgn0032677;CG5790;;amino acid synthesis
+FBgn0032725;CG10679;;amino acid synthesis
+FBgn0032799;CG10166;;amino acid synthesis
+FBgn0032924;CG9247;;amino acid synthesis
+FBgn0032929;CG9241;;amino acid synthesis
+FBgn0032940;CG18362;;amino acid synthesis
+FBgn0032979;CG1832;;amino acid synthesis
+FBgn0032988;CG3278;;amino acid synthesis
+FBgn0033010;CG3136;;amino acid synthesis
+FBgn0033050;CG7865;;amino acid synthesis
+FBgn0033069;CG8335;;amino acid synthesis
+FBgn0033184;CG12736;;amino acid synthesis
+FBgn0033233;CG15835;;amino acid synthesis
+FBgn0033246;CG11198;;amino acid synthesis
+FBgn0033260;CG8711;;amino acid synthesis
+FBgn0033272;CG8707;;amino acid synthesis
+FBgn0033315;CG8734;;amino acid synthesis
+FBgn0033378;CG8781;;amino acid synthesis
+FBgn0033450;CG12924;;amino acid synthesis
+FBgn0033457;CG1675;;amino acid synthesis
+FBgn0033483;CG12919;;amino acid synthesis
+FBgn0033544;CG7220;;amino acid synthesis
+FBgn0033597;CG9079;;amino acid synthesis
+FBgn0033598;CG13224;;amino acid synthesis
+FBgn0033600;CG9077;;amino acid synthesis
+FBgn0033601;CG9076;;amino acid synthesis
+FBgn0033602;CG13222;;amino acid synthesis
+FBgn0033603;CG13214;;amino acid synthesis
+FBgn0033692;CG13176;;amino acid synthesis
+FBgn0033725;CG8502;;amino acid synthesis
+FBgn0033726;CG8836;;amino acid synthesis
+FBgn0033728;CG8505;;amino acid synthesis
+FBgn0033729;CG8510;;amino acid synthesis
+FBgn0033730;CG8511;;amino acid synthesis
+FBgn0033731;CG8515;;amino acid synthesis
+FBgn0033748;CG8821;;amino acid synthesis
+FBgn0033749;CG8819;;amino acid synthesis
+FBgn0033842;CG5970;;amino acid synthesis
+FBgn0033845;CG17064;;amino acid synthesis
+FBgn0033846;CG6061;;amino acid synthesis
+FBgn0033859;CG6197;;amino acid synthesis
+FBgn0033865;CG6220;;amino acid synthesis
+FBgn0033867;CG13338;;amino acid synthesis
+FBgn0033869;CG6305;;amino acid synthesis
+FBgn0033900;CG8257;;amino acid synthesis
+FBgn0033902;CG8309;;amino acid synthesis
+FBgn0033912;CG8415;;amino acid synthesis
+FBgn0033936;CG17386;;amino acid synthesis
+FBgn0033942;CG10112;;amino acid synthesis
+FBgn0034012;CG16801;;amino acid synthesis
+FBgn0034047;CG12970;;amino acid synthesis
+FBgn0034068;CG8400;;amino acid synthesis
+FBgn0034073;CG8414;;amino acid synthesis
+FBgn0034091;CG8448;;amino acid synthesis
+FBgn0034096;CG7786;;amino acid synthesis
+FBgn0034136;CG8380;;amino acid synthesis
+FBgn0034157;CG15920;;amino acid synthesis
+FBgn0034177;CG6796;;amino acid synthesis
+FBgn0034237;CG4878;;amino acid synthesis
+FBgn0034246;CG6493;;amino acid synthesis
+FBgn0034259;CG6459;;amino acid synthesis
+FBgn0034314;CG5140;;amino acid synthesis
+FBgn0034401;CG15100;;amino acid synthesis
+FBgn0034451;CG11242;;amino acid synthesis
+FBgn0034499;CG9036;;amino acid synthesis
+FBgn0034517;CG18066;;amino acid synthesis
+FBgn0034521;CG13431;;amino acid synthesis
+FBgn0034534;CG9954;;amino acid synthesis
+FBgn0034606;CG18375;;amino acid synthesis
+FBgn0034617;CG9754;;amino acid synthesis
+FBgn0034641;CG10080;;amino acid synthesis
+FBgn0034646;CG9862;;amino acid synthesis
+FBgn0034763;CG12190;;amino acid synthesis
+FBgn0034878;CG3941;;amino acid synthesis
+FBgn0034897;CG11299;;amino acid synthesis
+FBgn0034950;CG3105;;amino acid synthesis
+FBgn0034968;CG3195;;amino acid synthesis
+FBgn0034970;CG4005;;amino acid synthesis
+FBgn0035026;CG12252;;amino acid synthesis
+FBgn0035039;CG3608;;amino acid synthesis
+FBgn0035063;CG3594;;amino acid synthesis
+FBgn0035064;CG16912;;amino acid synthesis
+FBgn0035106;CG7036;;amino acid synthesis
+FBgn0035111;CG16940;;amino acid synthesis
+FBgn0035121;CG7008;;amino acid synthesis
+FBgn0035142;CG17090;;amino acid synthesis
+FBgn0035187;CG9122;;amino acid synthesis
+FBgn0035207;CG9153;;amino acid synthesis
+FBgn0035279;CG13934;;amino acid synthesis
+FBgn0035280;CG13935;;amino acid synthesis
+FBgn0035281;CG1919;;amino acid synthesis
+FBgn0035402;CG12082;;amino acid synthesis
+FBgn0035405;CG15812;;amino acid synthesis
+FBgn0035455;CG10862;;amino acid synthesis
+FBgn0035510;CG15006;;amino acid synthesis
+FBgn0035511;CG15007;;amino acid synthesis
+FBgn0035512;CG15008;;amino acid synthesis
+FBgn0035513;CG1259;;amino acid synthesis
+FBgn0035584;CG17030;;amino acid synthesis
+FBgn0035590;CG10673;;amino acid synthesis
+FBgn0035601;CG10640;;amino acid synthesis
+FBgn0035608;CG10630;;amino acid synthesis
+FBgn0035617;CG5146;;amino acid synthesis
+FBgn0035626;CG17334;;amino acid synthesis
+FBgn0035627;CG10583;;amino acid synthesis
+FBgn0035631;CG5495;;amino acid synthesis
+FBgn0035686;CG12330;;amino acid synthesis
+FBgn0035688;CG10289;;amino acid synthesis
+FBgn0035713;CG10107;;amino acid synthesis
+FBgn0035720;CG10077;;amino acid synthesis
+FBgn0035735;CG8640;;amino acid synthesis
+FBgn0035736;CG8638;;amino acid synthesis
+FBgn0035737;CG8634;;amino acid synthesis
+FBgn0035766;CG8598;;amino acid synthesis
+FBgn0035769;CG8591;;amino acid synthesis
+FBgn0035811;CG12262;;amino acid synthesis
+FBgn0035849;CG7404;;amino acid synthesis
+FBgn0035851;CG7999;;amino acid synthesis
+FBgn0035853;CG7375;;amino acid synthesis
+FBgn0035873;CG13670;;amino acid synthesis
+FBgn0035875;CG7076;;amino acid synthesis
+FBgn0035942;CG5660;;amino acid synthesis
+FBgn0035985;CG3672;;amino acid synthesis
+FBgn0036108;CG7941;;amino acid synthesis
+FBgn0036109;CG18349;;amino acid synthesis
+FBgn0036110;CG18348;;amino acid synthesis
+FBgn0036126;CG6272;;amino acid synthesis
+FBgn0036187;CG11660;;amino acid synthesis
+FBgn0036373;CG10741;;amino acid synthesis
+FBgn0036397;CG8783;;amino acid synthesis
+FBgn0036411;CG7345;;amino acid synthesis
+FBgn0036485;CG6869;;amino acid synthesis
+FBgn0036544;CG6114;;amino acid synthesis
+FBgn0036568;CG5389;;amino acid synthesis
+FBgn0036569;CG5414;;amino acid synthesis
+FBgn0036574;CG16838;;amino acid synthesis
+FBgn0036617;CG4818;;amino acid synthesis
+FBgn0036618;CG12255;;amino acid synthesis
+FBgn0036619;CG4784;;amino acid synthesis
+FBgn0036629;CG4573;;amino acid synthesis
+FBgn0036640;CG4118;;amino acid synthesis
+FBgn0036641;CG16725;;amino acid synthesis
+FBgn0036680;CG9665;;amino acid synthesis
+FBgn0036730;CG13732;;amino acid synthesis
+FBgn0036746;CG6064;;amino acid synthesis
+FBgn0036754;CG5589;;amino acid synthesis
+FBgn0036763;CG7441;;amino acid synthesis
+FBgn0036878;CG9283;;amino acid synthesis
+FBgn0036879;CG9290;;amino acid synthesis
+FBgn0036880;CG9295;;amino acid synthesis
+FBgn0036881;CG9299;;amino acid synthesis
+FBgn0036892;CG8798;;amino acid synthesis
+FBgn0036893;CG9376;;amino acid synthesis
+FBgn0036915;CG7757;;amino acid synthesis
+FBgn0036997;CG5955;;amino acid synthesis
+FBgn0037027;CG3680;;amino acid synthesis
+FBgn0037045;CG10584;;amino acid synthesis
+FBgn0037067;CG11310;;amino acid synthesis
+FBgn0037068;CG7663;;amino acid synthesis
+FBgn0037069;CG7658;;amino acid synthesis
+FBgn0037093;CG7597;;amino acid synthesis
+FBgn0037109;CG7162;;amino acid synthesis
+FBgn0037114;CG7160;;amino acid synthesis
+FBgn0037137;CG7421;;amino acid synthesis
+FBgn0037263;CG18271;;amino acid synthesis
+FBgn0037270;CG9769;;amino acid synthesis
+FBgn0037325;CG12147;;amino acid synthesis
+FBgn0037330;CG2109;;amino acid synthesis
+FBgn0037332;CG14670;;amino acid synthesis
+FBgn0037344;CG2926;;amino acid synthesis
+FBgn0037384;CG10981;;amino acid synthesis
+FBgn0037391;CG2017;;amino acid synthesis
+FBgn0037446;CG10267;;amino acid synthesis
+FBgn0037481;CG10059;;amino acid synthesis
+FBgn0037515;CG3066;;amino acid synthesis
+FBgn0037526;CG10092;;amino acid synthesis
+FBgn0037540;CG2702;;amino acid synthesis
+FBgn0037573;CG7483;;amino acid synthesis
+FBgn0037617;CG8145;;amino acid synthesis
+FBgn0037624;CG8223;;amino acid synthesis
+FBgn0037647;CG11968;;amino acid synthesis
+FBgn0037657;CG11990;;amino acid synthesis
+FBgn0037659;CG11033;;amino acid synthesis
+FBgn0037660;CG18005;;amino acid synthesis
+FBgn0037669;CG9740;;amino acid synthesis
+FBgn0037672;CG12952;;amino acid synthesis
+FBgn0037675;CG8120;;amino acid synthesis
+FBgn0037684;CG8129;;amino acid synthesis
+FBgn0037780;CG3925;;amino acid synthesis
+FBgn0037831;CG14685;;amino acid synthesis
+FBgn0037874;CG4800;;amino acid synthesis
+FBgn0037898;CG18643;;amino acid synthesis
+FBgn0037937;CG6913;;amino acid synthesis
+FBgn0037987;CG14739;;amino acid synthesis
+FBgn0038166;CG9588;;amino acid synthesis
+FBgn0038167;CG9374;;amino acid synthesis
+FBgn0038197;CG3143;;amino acid synthesis
+FBgn0038233;CG8464;;amino acid synthesis
+FBgn0038295;CG4154;;amino acid synthesis
+FBgn0038327;CG5063;;amino acid synthesis
+FBgn0038344;CG5205;;amino acid synthesis
+FBgn0038390;CG5083;;amino acid synthesis
+FBgn0038391;CG10278;;amino acid synthesis
+FBgn0038418;CG10309;;amino acid synthesis
+FBgn0038475;CG3962;;amino acid synthesis
+FBgn0038478;CG5148;;amino acid synthesis
+FBgn0038515;CG5823;;amino acid synthesis
+FBgn0038570;CG7217;;amino acid synthesis
+FBgn0038608;CG7670;;amino acid synthesis
+FBgn0038704;CG5316;;amino acid synthesis
+FBgn0038714;CG6240;;amino acid synthesis
+FBgn0038746;CG4510;;amino acid synthesis
+FBgn0038767;CG4413;;amino acid synthesis
+FBgn0038769;CG10889;;amino acid synthesis
+FBgn0038772;CG4973;;amino acid synthesis
+FBgn0038773;CG10887;;amino acid synthesis
+FBgn0038788;CG5085;;amino acid synthesis
+FBgn0038796;CG10881;;amino acid synthesis
+FBgn0038819;CG5494;;amino acid synthesis
+FBgn0038827;CG17269;;amino acid synthesis
+FBgn0038887;CG7907;;amino acid synthesis
+FBgn0038889;CG7922;;amino acid synthesis
+FBgn0038902;CG6800;;amino acid synthesis
+FBgn0038978;CG7045;;amino acid synthesis
+FBgn0038979;CG7046;;amino acid synthesis
+FBgn0039016;CG4792;;amino acid synthesis
+FBgn0039039;CG4677;;amino acid synthesis
+FBgn0039044;CG33336;;amino acid synthesis
+FBgn0039083;CG10177;;amino acid synthesis
+FBgn0039117;CG10210;;amino acid synthesis
+FBgn0039120;CG10198;;amino acid synthesis
+FBgn0039140;CG5410;;amino acid synthesis
+FBgn0039169;CG5669;;amino acid synthesis
+FBgn0039182;CG5728;;amino acid synthesis
+FBgn0039183;CG6413;;amino acid synthesis
+FBgn0039209;CG13624;;amino acid synthesis
+FBgn0039225;CG6892;;amino acid synthesis
+FBgn0039254;CG13645;;amino acid synthesis
+FBgn0039286;CG11849;;amino acid synthesis
+FBgn0039306;CG11859;;amino acid synthesis
+FBgn0039336;CG4553;;amino acid synthesis
+FBgn0039338;CG4548;;amino acid synthesis
+FBgn0039387;CG5959;;amino acid synthesis
+FBgn0039411;CG32474;;amino acid synthesis
+FBgn0039444;CG14243;;amino acid synthesis
+FBgn0039480;CG6131;;amino acid synthesis
+FBgn0039481;CG15884;;amino acid synthesis
+FBgn0039509;CG3350;;amino acid synthesis
+FBgn0039566;CG4849;;amino acid synthesis
+FBgn0039680;CG1911;;amino acid synthesis
+FBgn0039687;CG7593;;amino acid synthesis
+FBgn0039743;CG7946;;amino acid synthesis
+FBgn0039796;CG12069;;amino acid synthesis
+FBgn0039797;CG1340;;amino acid synthesis
+FBgn0039802;CG1349;;amino acid synthesis
+FBgn0039805;CG12045;;amino acid synthesis
+FBgn0039830;CG1746;;amino acid synthesis
+FBgn0039861;CG1800;;amino acid synthesis
+FBgn0039904;CG1710;;amino acid synthesis
+FBgn0039907;CG2041;;amino acid synthesis
+FBgn0039908;CG11533;;amino acid synthesis
+FBgn0039920;CG11360;;amino acid synthesis
+FBgn0039938;CG11153;;amino acid synthesis
+FBgn0039972;CG17018;;amino acid synthesis
+FBgn0040007;CG18001;;amino acid synthesis
+FBgn0040066;CG17437;;amino acid synthesis
+FBgn0040071;CG6889;;amino acid synthesis
+FBgn0040075;CG9750;;amino acid synthesis
+FBgn0040077;CG33748;;amino acid synthesis
+FBgn0040078;CG4003;;amino acid synthesis
+FBgn0040268;CG10123;;amino acid synthesis
+FBgn0040290;CG7487;;amino acid synthesis
+FBgn0040291;CG16988;;amino acid synthesis
+FBgn0040298;CG32417;;amino acid synthesis
+FBgn0040305;CG3743;;amino acid synthesis
+FBgn0040319;CG2259;;amino acid synthesis
+FBgn0040339;CG3034;;amino acid synthesis
+FBgn0040465;CG12767;;amino acid synthesis
+FBgn0040477;CG13329;;amino acid synthesis
+FBgn0040918;CG3576;;amino acid synthesis
+FBgn0041092;CG13109;;amino acid synthesis
+FBgn0041100;CG10523;;amino acid synthesis
+FBgn0041111;CG8817;;amino acid synthesis
+FBgn0041156;CG8254;;amino acid synthesis
+FBgn0041171;CG15010;;amino acid synthesis
+FBgn0041174;CG13221;;amino acid synthesis
+FBgn0041186;CG11886;;amino acid synthesis
+FBgn0041205;CG16910;;amino acid synthesis
+FBgn0041210;CG1770;;amino acid synthesis
+FBgn0041342;CG1049;;amino acid synthesis
+FBgn0041781;CG4636;;amino acid synthesis
+FBgn0042118;CG18777;;amino acid synthesis
+FBgn0042119;CG18778;;amino acid synthesis
+FBgn0042185;CG18769;;amino acid synthesis
+FBgn0043010;CG4643;;amino acid synthesis
+FBgn0043865;CG13916;;amino acid synthesis
+FBgn0043884;CG33106;;amino acid synthesis
+FBgn0043900;CG11518;;amino acid synthesis
+FBgn0044020;CG8998;;amino acid synthesis
+FBgn0044323;CG7392;;amino acid synthesis
+FBgn0044324;CG10712;;amino acid synthesis
+FBgn0045035;CG6535;;amino acid synthesis
+FBgn0045759;CG18647;;amino acid synthesis
+FBgn0045843;CG2595;;amino acid synthesis
+FBgn0045852;CG31753;;amino acid synthesis
+FBgn0045980;CG10951;;amino acid synthesis
+FBgn0046692;CG40293;;amino acid synthesis
+FBgn0046706;CG40080;;amino acid synthesis
+FBgn0050042;CG30042;;amino acid synthesis
+FBgn0050045;CG30045;;amino acid synthesis
+FBgn0050085;CG30085;;amino acid synthesis
+FBgn0050155;CR30155;;amino acid synthesis
+FBgn0050163;CG30163;;amino acid synthesis
+FBgn0050185;CG30185;;amino acid synthesis
+FBgn0050198;CR30198;;amino acid synthesis
+FBgn0050199;CR30199;;amino acid synthesis
+FBgn0050200;CR30200;;amino acid synthesis
+FBgn0050201;CR30201;;amino acid synthesis
+FBgn0050202;CR30202;;amino acid synthesis
+FBgn0050206;CR30206;;amino acid synthesis
+FBgn0050208;CR30208;;amino acid synthesis
+FBgn0050209;CR30209;;amino acid synthesis
+FBgn0050211;CR30211;;amino acid synthesis
+FBgn0050212;CR30212;;amino acid synthesis
+FBgn0050215;CR30215;;amino acid synthesis
+FBgn0050218;CR30218;;amino acid synthesis
+FBgn0050220;CR30220;;amino acid synthesis
+FBgn0050223;CR30223;;amino acid synthesis
+FBgn0050227;CR30227;;amino acid synthesis
+FBgn0050229;CR30229;;amino acid synthesis
+FBgn0050231;CR30231;;amino acid synthesis
+FBgn0050232;CR30232;;amino acid synthesis
+FBgn0050234;CR30234;;amino acid synthesis
+FBgn0050235;CR30235;;amino acid synthesis
+FBgn0050237;CR30237;;amino acid synthesis
+FBgn0050238;CR30238;;amino acid synthesis
+FBgn0050239;CR30239;;amino acid synthesis
+FBgn0050240;CR30240;;amino acid synthesis
+FBgn0050241;CR30241;;amino acid synthesis
+FBgn0050249;CR30249;;amino acid synthesis
+FBgn0050250;CR30250;;amino acid synthesis
+FBgn0050251;CR30251;;amino acid synthesis
+FBgn0050254;CR30254;;amino acid synthesis
+FBgn0050257;CR30257;;amino acid synthesis
+FBgn0050297;CR30297;;amino acid synthesis
+FBgn0050298;CR30298;;amino acid synthesis
+FBgn0050299;CR30299;;amino acid synthesis
+FBgn0050316;CR30316;;amino acid synthesis
+FBgn0050333;CR30333;;amino acid synthesis
+FBgn0050372;CG30372;;amino acid synthesis
+FBgn0050401;CG30401;;amino acid synthesis
+FBgn0050406;CR30406;;amino acid synthesis
+FBgn0050407;CR30407;;amino acid synthesis
+FBgn0050424;CG30424;;amino acid synthesis
+FBgn0050452;CR30452;;amino acid synthesis
+FBgn0050454;CR30454;;amino acid synthesis
+FBgn0050506;CR30506;;amino acid synthesis
+FBgn0050509;CR30509;;amino acid synthesis
+FBgn0051005;CG31005;;amino acid synthesis
+FBgn0051023;CR31023;;amino acid synthesis
+FBgn0051070;CR31070;;amino acid synthesis
+FBgn0051071;CR31071;;amino acid synthesis
+FBgn0051130;CR31130;;amino acid synthesis
+FBgn0051143;CR31143;;amino acid synthesis
+FBgn0051162;CR31162;;amino acid synthesis
+FBgn0051165;CR31165;;amino acid synthesis
+FBgn0051166;CR31166;;amino acid synthesis
+FBgn0051167;CR31167;;amino acid synthesis
+FBgn0051215;CR31215;;amino acid synthesis
+FBgn0051228;CR31228;;amino acid synthesis
+FBgn0051242;CR31242;;amino acid synthesis
+FBgn0051282;CR31282;;amino acid synthesis
+FBgn0051331;CR31331;;amino acid synthesis
+FBgn0051333;CR31333;;amino acid synthesis
+FBgn0051334;CR31334;;amino acid synthesis
+FBgn0051356;CR31356;;amino acid synthesis
+FBgn0051382;CR31382;;amino acid synthesis
+FBgn0051383;CR31383;;amino acid synthesis
+FBgn0051416;CR31416;;amino acid synthesis
+FBgn0051432;CR31432;;amino acid synthesis
+FBgn0051471;CR31471;;amino acid synthesis
+FBgn0051472;CG31472;;amino acid synthesis
+FBgn0051480;CR31480;;amino acid synthesis
+FBgn0051481;CG31481;;amino acid synthesis
+FBgn0051491;CR31491;;amino acid synthesis
+FBgn0051494;CR31494;;amino acid synthesis
+FBgn0051497;CR31497;;amino acid synthesis
+FBgn0051506;CR31506;;amino acid synthesis
+FBgn0051518;CR31518;;amino acid synthesis
+FBgn0051568;CR31568;;amino acid synthesis
+FBgn0051569;CR31569;;amino acid synthesis
+FBgn0051570;CR31570;;amino acid synthesis
+FBgn0051573;CR31573;;amino acid synthesis
+FBgn0051575;CR31575;;amino acid synthesis
+FBgn0051576;CR31576;;amino acid synthesis
+FBgn0051577;CR31577;;amino acid synthesis
+FBgn0051578;CR31578;;amino acid synthesis
+FBgn0051579;CR31579;;amino acid synthesis
+FBgn0051580;CR31580;;amino acid synthesis
+FBgn0051583;CR31583;;amino acid synthesis
+FBgn0051588;CR31588;;amino acid synthesis
+FBgn0051602;CR31602;;amino acid synthesis
+FBgn0051603;CR31603;;amino acid synthesis
+FBgn0051604;CR31604;;amino acid synthesis
+FBgn0051631;CR31631;;amino acid synthesis
+FBgn0051669;CR31669;;amino acid synthesis
+FBgn0051739;CG31739;;amino acid synthesis
+FBgn0051876;CG31876;;amino acid synthesis
+FBgn0051885;CR31885;;amino acid synthesis
+FBgn0051888;CR31888;;amino acid synthesis
+FBgn0051889;CR31889;;amino acid synthesis
+FBgn0051890;CR31890;;amino acid synthesis
+FBgn0051892;CR31892;;amino acid synthesis
+FBgn0051895;CR31895;;amino acid synthesis
+FBgn0051896;CR31896;;amino acid synthesis
+FBgn0051914;CR31914;;amino acid synthesis
+FBgn0051939;CR31939;;amino acid synthesis
+FBgn0051940;CR31940;;amino acid synthesis
+FBgn0051942;CR31942;;amino acid synthesis
+FBgn0051943;CR31943;;amino acid synthesis
+FBgn0051944;CR31944;;amino acid synthesis
+FBgn0051946;CR31946;;amino acid synthesis
+FBgn0051963;CR31963;;amino acid synthesis
+FBgn0051971;CR31971;;amino acid synthesis
+FBgn0052029;CG32029;;amino acid synthesis
+FBgn0052062;CG32062;;amino acid synthesis
+FBgn0052068;CG32068;;amino acid synthesis
+FBgn0052093;CR32093;;amino acid synthesis
+FBgn0052126;CR32126;;amino acid synthesis
+FBgn0052127;CR32127;;amino acid synthesis
+FBgn0052128;CR32128;;amino acid synthesis
+FBgn0052129;CR32129;;amino acid synthesis
+FBgn0052153;CR32153;;amino acid synthesis
+FBgn0052173;CR32173;;amino acid synthesis
+FBgn0052200;CR32200;;amino acid synthesis
+FBgn0052272;CR32272;;amino acid synthesis
+FBgn0052273;CR32273;;amino acid synthesis
+FBgn0052285;CR32285;;amino acid synthesis
+FBgn0052286;CR32286;;amino acid synthesis
+FBgn0052287;CR32287;;amino acid synthesis
+FBgn0052288;CR32288;;amino acid synthesis
+FBgn0052289;CR32289;;amino acid synthesis
+FBgn0052296;CG32296;;amino acid synthesis
+FBgn0052303;CR32303;;amino acid synthesis
+FBgn0052312;CR32312;;amino acid synthesis
+FBgn0052324;CR32324;;amino acid synthesis
+FBgn0052328;CR32328;;amino acid synthesis
+FBgn0052329;CR32329;;amino acid synthesis
+FBgn0052330;CR32330;;amino acid synthesis
+FBgn0052357;CR32357;;amino acid synthesis
+FBgn0052358;CR32358;;amino acid synthesis
+FBgn0052359;CR32359;;amino acid synthesis
+FBgn0052360;CR32360;;amino acid synthesis
+FBgn0052361;CR32361;;amino acid synthesis
+FBgn0052362;CR32362;;amino acid synthesis
+FBgn0052363;CR32363;;amino acid synthesis
+FBgn0052364;CG32364;;amino acid synthesis
+FBgn0052370;CR32370;;amino acid synthesis
+FBgn0052404;CG32404;;amino acid synthesis
+FBgn0052405;CG32405;;amino acid synthesis
+FBgn0052420;CR32420;;amino acid synthesis
+FBgn0052421;CR32421;;amino acid synthesis
+FBgn0052423;CG32423;;amino acid synthesis
+FBgn0052449;CR32449;;amino acid synthesis
+FBgn0052460;CR32460;;amino acid synthesis
+FBgn0052480;CR32480;;amino acid synthesis
+FBgn0052481;CR32481;;amino acid synthesis
+FBgn0052482;CR32482;;amino acid synthesis
+FBgn0052493;CR32493;;amino acid synthesis
+FBgn0052520;CR32520;;amino acid synthesis
+FBgn0052525;CR32525;;amino acid synthesis
+FBgn0052546;CR32546;;amino acid synthesis
+FBgn0052666;CG32666;;amino acid synthesis
+FBgn0052676;CG32676;;amino acid synthesis
+FBgn0052703;CG32703;;amino acid synthesis
+FBgn0052740;CR32740;;amino acid synthesis
+FBgn0052748;CR32748;;amino acid synthesis
+FBgn0052785;CR32785;;amino acid synthesis
+FBgn0052826;CR32826;;amino acid synthesis
+FBgn0053113;CG33113;;amino acid synthesis
+FBgn0053196;CG33196;;amino acid synthesis
+FBgn0053302;CG33302;;amino acid synthesis
+FBgn0053534;CR33534;;amino acid synthesis
+FBgn0053535;CR33535;;amino acid synthesis
+FBgn0053536;CR33536;;amino acid synthesis
+FBgn0053537;CR33537;;amino acid synthesis
+FBgn0053538;CR33538;;amino acid synthesis
+FBgn0053539;CR33539;;amino acid synthesis
+FBgn0053551;CR33551;;amino acid synthesis
+FBgn0053554;CG33554;;amino acid synthesis
+FBgn0053557;CG33557;;amino acid synthesis
+FBgn0053977;CG33977;;amino acid synthesis
+FBgn0061469;CG6190;;amino acid synthesis
+FBgn0064225;CG17489;;amino acid synthesis
+FBgn0083981;CG34145;;amino acid synthesis
+FBgn0085300;CG34271;;amino acid synthesis
+FBgn0085432;CG34403;;amino acid synthesis
+FBgn0085444;CG34415;;amino acid synthesis
+FBgn0085450;CG34421;;amino acid synthesis
+FBgn0085451;CG34422;;amino acid synthesis
+FBgn0085484;CG34455;;amino acid synthesis
+FBgn0085491;CG34462;;amino acid synthesis
+FBgn0086129;CG3231;;amino acid synthesis
+FBgn0086251;CG9252;;amino acid synthesis
+FBgn0086350;CG8961;;amino acid synthesis
+FBgn0086356;CG13345;;amino acid synthesis
+FBgn0086361;CG1906;;amino acid synthesis
+FBgn0086370;CG6072;;amino acid synthesis
+FBgn0086443;CG10687;;amino acid synthesis
+FBgn0086447;CG10685;;amino acid synthesis
+FBgn0086450;CG2194;;amino acid synthesis
+FBgn0086519;CG9070;;amino acid synthesis
+FBgn0086611;CG18779;;amino acid synthesis
+FBgn0086655;CG9397;;amino acid synthesis
+FBgn0086680;CG10037;;amino acid synthesis
+FBgn0086687;CG5887;;amino acid synthesis
+FBgn0086694;CG10542;;amino acid synthesis
+FBgn0086695;CG2669;;amino acid synthesis
+FBgn0086758;CG31666;;amino acid synthesis
+FBgn0086782;CG11937;;amino acid synthesis
+FBgn0086895;CG8241;;amino acid synthesis
+FBgn0086900;CG34270;;amino acid synthesis
+FBgn0086907;CG13263;;amino acid synthesis
+FBgn0086908;CG12196;;amino acid synthesis
+FBgn0086912;CG11604;;amino acid synthesis
+FBgn0086915;CG3354;;amino acid synthesis
+FBgn0087008;CG12238;;amino acid synthesis
+FBgn0087012;CG1056;;amino acid synthesis
+FBgn0087035;CG7439;;amino acid synthesis
+FBgn0087040;CG8308;;amino acid synthesis
+FBgn0243512;CG7850;;amino acid synthesis
+FBgn0243586;CG5480;;amino acid synthesis
+FBgn0250732;CG33546;;amino acid synthesis
+FBgn0250746;CG12000;;amino acid synthesis
+FBgn0250786;CG3733;;amino acid synthesis
+FBgn0250789;CG1977;;amino acid synthesis
+FBgn0250823;CG6963;;amino acid synthesis
+FBgn0250833;CG34461;;amino acid synthesis
+FBgn0250871;CG2467;;amino acid synthesis
+FBgn0250874;CG2713;;amino acid synthesis
+FBgn0259113;CG6349;;amino acid synthesis
+FBgn0259162;CG42267;;amino acid synthesis
+FBgn0259168;CG42273;;amino acid synthesis
+FBgn0259176;CG42281;;amino acid synthesis
+FBgn0259195;CG42299;;amino acid synthesis
+FBgn0259196;CG42300;;amino acid synthesis
+FBgn0259211;CG42311;;amino acid synthesis
+FBgn0259246;CG42344;;amino acid synthesis
+FBgn0259481;CG11711;;amino acid synthesis
+FBgn0259676;CG5553;;amino acid synthesis
+FBgn0259685;CG6383;;amino acid synthesis
+FBgn0259712;CG42366;;amino acid synthesis
+FBgn0259749;CG9535;;amino acid synthesis
+FBgn0259789;CG12701;;amino acid synthesis
+FBgn0259791;CG6897;;amino acid synthesis
+FBgn0259794;CG13030;;amino acid synthesis
+FBgn0259876;CG34438;;amino acid synthesis
+FBgn0259938;CG17100;;amino acid synthesis
+FBgn0259986;CG33545;;amino acid synthesis
+FBgn0260006;CG33968;;amino acid synthesis
+FBgn0260243;CG11971;;amino acid synthesis
+FBgn0260397;CG17149;;amino acid synthesis
+FBgn0260399;CG7719;;amino acid synthesis
+FBgn0260400;CG4262;;amino acid synthesis
+FBgn0260632;CG6667;;amino acid synthesis
+FBgn0260635;CG12284;;amino acid synthesis
+FBgn0260639;CG3157;;amino acid synthesis
+FBgn0260642;CG1028;;amino acid synthesis
+FBgn0260653;CG32209;;amino acid synthesis
+FBgn0260747;CG5010;;amino acid synthesis
+FBgn0260749;CG5640;;amino acid synthesis
+FBgn0260771;CG42569;;amino acid synthesis
+FBgn0260780;CG15737;;amino acid synthesis
+FBgn0260789;CG12124;;amino acid synthesis
+FBgn0260932;CG13190;;amino acid synthesis
+FBgn0260936;CG5505;;amino acid synthesis
+FBgn0260938;CG9056;;amino acid synthesis
+FBgn0260943;CG32169;;amino acid synthesis
+FBgn0260959;CG42572;;amino acid synthesis
+FBgn0260962;CG7769;;amino acid synthesis
+FBgn0260972;CG8057;;amino acid synthesis
+FBgn0260985;CG14999;;amino acid synthesis
+FBgn0260987;CG17436;;amino acid synthesis
+FBgn0260991;CG12165;;amino acid synthesis
+FBgn0261020;CG7870;;amino acid synthesis
+FBgn0261109;CG7764;;amino acid synthesis
+FBgn0261113;CG17836;;amino acid synthesis
+FBgn0261277;CG1397;;amino acid synthesis
+FBgn0261278;CG17161;;amino acid synthesis
+FBgn0261279;CG42250;;amino acid synthesis
+FBgn0261283;CG8522;;amino acid synthesis
+FBgn0261285;CG5629;;amino acid synthesis
+FBgn0261341;CG8756;;amino acid synthesis
+FBgn0261385;CG2092;;amino acid synthesis
+FBgn0261387;CG17528;;amino acid synthesis
+FBgn0261394;CG9327;;amino acid synthesis
+FBgn0261434;CG9768;;amino acid synthesis
+FBgn0261530;CG6754;;amino acid synthesis
+FBgn0261552;CG42670;;amino acid synthesis
+FBgn0261573;CG42687;;amino acid synthesis
+FBgn0261599;CG8495;;amino acid synthesis
+FBgn0261617;CG15319;;amino acid synthesis
+FBgn0261648;CG6464;;amino acid synthesis
+FBgn0261703;CG42739;;amino acid synthesis
+FBgn0261793;CG18009;;amino acid synthesis
+FBgn0261797;CG7507;;amino acid synthesis
+FBgn0261823;CG8787;;amino acid synthesis
+FBgn0261850;CG9433;;amino acid synthesis
+FBgn0261873;CG32717;;amino acid synthesis
+FBgn0261885;CG7467;;amino acid synthesis
+FBgn0261930;CG6172;;amino acid synthesis
+FBgn0261933;CG10753;;amino acid synthesis
+FBgn0261938;CG4644;;amino acid synthesis
+FBgn0261953;CG7807;;amino acid synthesis
+FBgn0261954;CG4399;;amino acid synthesis
+FBgn0261963;CG6634;;amino acid synthesis
+FBgn0261983;CG4713;;amino acid synthesis
+FBgn0262117;CG17665;;amino acid synthesis
+FBgn0262125;CG1250;;amino acid synthesis
+FBgn0262126;CG10882;;amino acid synthesis
+FBgn0262139;CG42865;;amino acid synthesis
+FBgn0262166;CG8445;;amino acid synthesis
+FBgn0262467;CG8885;;amino acid synthesis
+FBgn0262473;CG5490;;amino acid synthesis
+FBgn0262477;CG43067;;amino acid synthesis
+FBgn0262519;CG8103;;amino acid synthesis
+FBgn0262524;CG14121;;amino acid synthesis
+FBgn0262527;CG4699;;amino acid synthesis
+FBgn0262560;CG7989;;amino acid synthesis
+FBgn0262582;CG43122;;amino acid synthesis
+FBgn0262601;CG5352;;amino acid synthesis
+FBgn0262617;CG43143;;amino acid synthesis
+FBgn0262656;CG10798;;amino acid synthesis
+FBgn0262734;CG4429;;amino acid synthesis
+FBgn0262739;CG6671;;amino acid synthesis
+FBgn0262743;CG2637;;amino acid synthesis
+FBgn0262955;CG3180;;amino acid synthesis
+FBgn0262975;CG43286;;amino acid synthesis
+FBgn0263102;CG2368;;amino acid synthesis
+FBgn0263112;CG43369;;amino acid synthesis
+FBgn0263121;CG18495;;amino acid synthesis
+FBgn0263133;CG4567;;amino acid synthesis
+FBgn0263198;CG10473;;amino acid synthesis
+FBgn0263220;CG43388;;amino acid synthesis
+FBgn0263231;CG9748;;amino acid synthesis
+FBgn0263232;CG32135;;amino acid synthesis
+FBgn0263237;CG3319;;amino acid synthesis
+FBgn0263240;CG1621;;amino acid synthesis
+FBgn0263241;CG33048;;amino acid synthesis
+FBgn0263396;CG16901;;amino acid synthesis
+FBgn0263490;CG34100;;amino acid synthesis
+FBgn0263510;CG6751;;amino acid synthesis
+FBgn0263593;CG8709;;amino acid synthesis
+FBgn0263600;CG5949;;amino acid synthesis
+FBgn0263697;CG13343;;amino acid synthesis
+FBgn0263738;CG43663;;amino acid synthesis
+FBgn0263755;CG43664;;amino acid synthesis
+FBgn0263757;CG43662;;amino acid synthesis
+FBgn0263782;CG10367;;amino acid synthesis
+FBgn0263855;CG7838;;amino acid synthesis
+FBgn0263863;CG6949;;amino acid synthesis
+FBgn0263864;CG6829;;amino acid synthesis
+FBgn0263933;CG4063;;amino acid synthesis
+FBgn0263968;CG32743;;amino acid synthesis
+FBgn0263979;CG4236;;amino acid synthesis
+FBgn0263995;CG43738;;amino acid synthesis
+FBgn0264075;CG11987;;amino acid synthesis
+FBgn0264270;CG43770;;amino acid synthesis
+FBgn0264307;CG43782;;amino acid synthesis
+FBgn0264326;CG6768;;amino acid synthesis
+FBgn0264357;CG17299;;amino acid synthesis
+FBgn0264442;CG43860;;amino acid synthesis
+FBgn0264490;CG18389;;amino acid synthesis
+FBgn0264491;CG10293;;amino acid synthesis
+FBgn0264492;CG17520;;amino acid synthesis
+FBgn0264493;CG12537;;amino acid synthesis
+FBgn0264495;CG42803;;amino acid synthesis
+FBgn0264562;CG43934;;amino acid synthesis
+FBgn0264753;CG44011;;amino acid synthesis
+FBgn0264848;CG10682;;amino acid synthesis
+FBgn0264875;CR44066;;amino acid synthesis
+FBgn0264922;CG4494;;amino acid synthesis
+FBgn0265174;CG44239;;amino acid synthesis
+FBgn0265189;CG44254;;amino acid synthesis
+FBgn0265190;CG44255;;amino acid synthesis
+FBgn0265193;CG44246;;amino acid synthesis
+FBgn0265487;CG33197;;amino acid synthesis
+FBgn0265597;CG44424;;amino acid synthesis
+FBgn0265598;CG44425;;amino acid synthesis
+FBgn0265623;CG3905;;amino acid synthesis
+FBgn0265726;CG44533;;amino acid synthesis
+FBgn0265784;CG6103;;amino acid synthesis
+FBgn0265959;CG44746;;amino acid synthesis
+FBgn0265974;CG10117;;amino acid synthesis
+FBgn0265998;CG42320;;amino acid synthesis
+FBgn0266083;CG3363;;amino acid synthesis
+FBgn0266084;CG42610;;amino acid synthesis
+FBgn0266195;CG44890;;amino acid synthesis
+FBgn0266411;CG45051;;amino acid synthesis
+FBgn0266452;CG45070;;amino acid synthesis
+FBgn0266557;CG3696;;amino acid synthesis
+FBgn0266573;CR45106;;amino acid synthesis
+FBgn0266574;CR45107;;amino acid synthesis
+FBgn0266585;CR32456;;amino acid synthesis
+FBgn0266599;CG4264;;amino acid synthesis
+FBgn0266717;CG6303;;amino acid synthesis
+FBgn0266724;CG5161;;amino acid synthesis
+FBgn0266757;CG5747;;amino acid synthesis
+FBgn0266848;CG14614;;amino acid synthesis
+FBgn0267337;CG42277;;amino acid synthesis
+FBgn0267339;CG33338;;amino acid synthesis
+FBgn0267351;CG15104;;amino acid synthesis
+FBgn0267398;CG40218;;amino acid synthesis
+FBgn0267487;CG9181;;amino acid synthesis
+FBgn0267821;CG5102;;amino acid synthesis
+FBgn0267977;CG9203;;amino acid synthesis
+FBgn0267978;CG8376;;amino acid synthesis
+FBgn0275436;CG13348;;amino acid synthesis
+FBgn0278608;CG12223;;amino acid synthesis
+FBgn0283437;CG42639;;amino acid synthesis
+FBgn0283442;CG46283;;amino acid synthesis
+FBgn0283451;CG11491;;amino acid synthesis
+FBgn0283467;CG3975;;amino acid synthesis
+FBgn0283468;CG3412;;amino acid synthesis
+FBgn0283471;CG7178;;amino acid synthesis
+FBgn0283521;CG12052;;amino acid synthesis
+FBgn0283531;CG3131;;amino acid synthesis
+FBgn0283535;CG1088;;amino acid synthesis
+FBgn0283657;CG34412;;amino acid synthesis
+FBgn0283681;CG4933;;amino acid synthesis
+FBgn0283712;CG1848;;amino acid synthesis
+FBgn0283741;CG42666;;amino acid synthesis
+FBgn0284084;CG4889;;amino acid synthesis
+FBgn0284220;CG10223;;amino acid synthesis
+FBgn0284243;CG9277;;amino acid synthesis
+FBgn0284245;CG8280;;amino acid synthesis
+FBgn0284248;CG17903;;amino acid synthesis
+FBgn0284249;CG15845;;amino acid synthesis
+FBgn0284253;CG33123;;amino acid synthesis
+FBgn0284421;CG18803;;amino acid synthesis
+FBgn0284442;CG4206;;amino acid synthesis
+FBgn0285917;;;amino acid synthesis
+FBgn0285926;;;amino acid synthesis
+FBgn0285952;;;amino acid synthesis
+FBgn0285954;;;amino acid synthesis
+FBgn0285971;;;amino acid synthesis
+FBgn0286051;;;amino acid synthesis
+FBgn0286198;;;amino acid synthesis
+FBgn0286204;;;amino acid synthesis
+FBgn0286213;;;amino acid synthesis
+FBgn0286784;;;amino acid synthesis
+FBgn0286786;;;amino acid synthesis
+FBgn0286788;;;amino acid synthesis
+FBgn0286809;;;amino acid synthesis
+FBgn0286813;;;amino acid synthesis
+FBgn0287185;;;amino acid synthesis
+FBgn0287186;;;amino acid synthesis
+FBgn0287225;;;amino acid synthesis
+FBgn0287478;;;amino acid synthesis
+FBgn0287696;;;amino acid synthesis
+FBgn0287720;;;amino acid synthesis
+FBgn0287725;;;amino acid synthesis
+FBgn0287767;;;amino acid synthesis
+FBgn0287768;;;amino acid synthesis
+FBgn0288686;;;amino acid synthesis
+FBgn0288690;;;amino acid synthesis
+FBgn0288835;;;amino acid synthesis
+FBgn0288966;;;amino acid synthesis
+FBgn0289122;;;amino acid synthesis
+FBgn0000064;CG6058;;Gluconeogenesis
+FBgn0003067;CG17725;;Gluconeogenesis
+FBgn0003071;CG4001;;Gluconeogenesis
+FBgn0003074;CG8251;;Gluconeogenesis
+FBgn0027580;CG1516;;Gluconeogenesis
+FBgn0027610;CG8790;;Gluconeogenesis
+FBgn0031451;CG9961;;Gluconeogenesis
+FBgn0031463;CG15400;;Gluconeogenesis
+FBgn0032820;CG31692;;Gluconeogenesis
+FBgn0034356;CG10924;;Gluconeogenesis
+FBgn0037332;CG14670;;Gluconeogenesis
+FBgn0038074;CG6188;;Gluconeogenesis
+FBgn0039425;CG5432;;Gluconeogenesis
+FBgn0039580;CG1345;;Gluconeogenesis
+FBgn0051472;CG31472;;Gluconeogenesis
+FBgn0086355;CG2171;;Gluconeogenesis
+FBgn0250906;CG3127;;Gluconeogenesis
+FBgn0287209;;;Gluconeogenesis
+FBgn0014135;CG4608;;Tracheagenesis
+FBgn0262139;CG42865;;Tracheagenesis
+FBgn0266411;CG45051;;Tracheagenesis
+FBgn0001218;CG4147;;mitochondria electron transfer chain
+FBgn0001308;CG7765;;mitochondria electron transfer chain
+FBgn0003941;CG2960;;mitochondria electron transfer chain
+FBgn0003942;CG5271;;mitochondria electron transfer chain
+FBgn0004959;CG6578;;mitochondria electron transfer chain
+FBgn0010213;CG8905;;mitochondria electron transfer chain
+FBgn0010265;CG13389;;mitochondria electron transfer chain
+FBgn0010411;CG8900;;mitochondria electron transfer chain
+FBgn0011211;CG3612;;mitochondria electron transfer chain
+FBgn0013676;CG34074;;mitochondria electron transfer chain
+FBgn0013681;CG34076;;mitochondria electron transfer chain
+FBgn0014028;CG3283;;mitochondria electron transfer chain
+FBgn0021906;CG7361;;mitochondria electron transfer chain
+FBgn0030136;CG2998;;mitochondria electron transfer chain
+FBgn0030872;CG6492;;mitochondria electron transfer chain
+FBgn0030975;CG7349;;mitochondria electron transfer chain
+FBgn0031392;CG7263;;mitochondria electron transfer chain
+FBgn0032833;CG10664;;mitochondria electron transfer chain
+FBgn0033274;CG14757;;mitochondria electron transfer chain
+FBgn0033413;CG8806;;mitochondria electron transfer chain
+FBgn0033523;CG12895;;mitochondria electron transfer chain
+FBgn0033679;CG8888;;mitochondria electron transfer chain
+FBgn0033912;CG8415;;mitochondria electron transfer chain
+FBgn0036222;CG5718;;mitochondria electron transfer chain
+FBgn0037860;CG6629;;mitochondria electron transfer chain
+FBgn0037873;CG6666;;mitochondria electron transfer chain
+FBgn0039112;CG10219;;mitochondria electron transfer chain
+FBgn0039406;CG6090;;mitochondria electron transfer chain
+FBgn0039713;CG7808;;mitochondria electron transfer chain
+FBgn0041100;CG10523;;mitochondria electron transfer chain
+FBgn0042627;CG3524;;mitochondria electron transfer chain
+FBgn0051005;CG31005;;mitochondria electron transfer chain
+FBgn0064225;CG17489;;mitochondria electron transfer chain
+FBgn0066084;CG30425;;mitochondria electron transfer chain
+FBgn0086359;CG3953;;mitochondria electron transfer chain
+FBgn0261439;CG17246;;mitochondria electron transfer chain
+FBgn0261550;CG42668;;mitochondria electron transfer chain
+FBgn0261592;CG10944;;mitochondria electron transfer chain
+FBgn0261597;CG10305;;mitochondria electron transfer chain
+FBgn0261599;CG8495;;mitochondria electron transfer chain
+FBgn0262112;CG12068;;mitochondria electron transfer chain
+FBgn0283427;CG3523;;mitochondria electron transfer chain
+FBgn0285943;;;mitochondria electron transfer chain
+FBgn0286213;;;mitochondria electron transfer chain
+FBgn0287184;;;mitochondria electron transfer chain
+FBgn0000063;CG7643;;Glycogen synthesis
+FBgn0000259;CG15224;;Glycogen synthesis
+FBgn0000273;CG4379;;Glycogen synthesis
+FBgn0003124;CG12306;;Glycogen synthesis
+FBgn0003204;CG1799;;Glycogen synthesis
+FBgn0003371;CG2621;;Glycogen synthesis
+FBgn0003507;CG3992;;Glycogen synthesis
+FBgn0003861;CG7875;;Glycogen synthesis
+FBgn0004914;CG9310;;Glycogen synthesis
+FBgn0011754;CG1830;;Glycogen synthesis
+FBgn0013759;CG6703;;Glycogen synthesis
+FBgn0013987;CG3086;;Glycogen synthesis
+FBgn0014859;CG1864;;Glycogen synthesis
+FBgn0015024;CG2028;;Glycogen synthesis
+FBgn0016131;CG5072;;Glycogen synthesis
+FBgn0016930;CG4551;;Glycogen synthesis
+FBgn0017581;CG17342;;Glycogen synthesis
+FBgn0019686;CG10895;;Glycogen synthesis
+FBgn0020618;CG7111;;Glycogen synthesis
+FBgn0023169;CG3051;;Glycogen synthesis
+FBgn0025625;CG4290;;Glycogen synthesis
+FBgn0025800;CG2262;;Glycogen synthesis
+FBgn0026597;CG7926;;Glycogen synthesis
+FBgn0026598;CG6193;;Glycogen synthesis
+FBgn0027101;CG40478;;Glycogen synthesis
+FBgn0027364;CG3871;;Glycogen synthesis
+FBgn0028410;CG5182;;Glycogen synthesis
+FBgn0028978;CG5408;;Glycogen synthesis
+FBgn0029891;CG4523;;Glycogen synthesis
+FBgn0031730;CG7236;;Glycogen synthesis
+FBgn0033246;CG11198;;Glycogen synthesis
+FBgn0034950;CG3105;;Glycogen synthesis
+FBgn0038167;CG9374;;Glycogen synthesis
+FBgn0039083;CG10177;;Glycogen synthesis
+FBgn0053138;CG33138;;Glycogen synthesis
+FBgn0260972;CG8057;;Glycogen synthesis
+FBgn0261387;CG17528;;Glycogen synthesis
+FBgn0261873;CG32717;;Glycogen synthesis
+FBgn0264357;CG17299;;Glycogen synthesis
+FBgn0267339;CG33338;;Glycogen synthesis
+FBgn0283657;CG34412;;Glycogen synthesis
+FBgn0001124;CG8430;;Transaminase
+FBgn0001125;CG4233;;Transaminase
+FBgn0001130;;;Transaminase
+FBgn0014031;CG3926;;Transaminase
+FBgn0022774;CG8782;;Transaminase
+FBgn0030478;CG1640;;Transaminase
+FBgn0030482;CG1673;;Transaminase
+FBgn0030558;CG1461;;Transaminase
+FBgn0036117;CG6321;;Transaminase
+FBgn0036381;CG8745;;Transaminase
+FBgn0036927;CG7433;;Transaminase
+FBgn0037186;CG11241;;Transaminase
+FBgn0037955;CG6950;;Transaminase
+FBgn0039580;CG1345;;Transaminase
+FBgn0287209;;;Transaminase
+FBgn0000370;CG8669;;Fatty acid synthesis
+FBgn0001223;CG4460;;Fatty acid synthesis
+FBgn0001230;CG5436;;Fatty acid synthesis
+FBgn0001233;CG1242;;Fatty acid synthesis
+FBgn0002939;CG31783;;Fatty acid synthesis
+FBgn0003116;CG3461;;Fatty acid synthesis
+FBgn0004436;CG2013;;Fatty acid synthesis
+FBgn0004914;CG9310;;Fatty acid synthesis
+FBgn0010051;CG1063;;Fatty acid synthesis
+FBgn0013275;CG31366;;Fatty acid synthesis
+FBgn0013276;CG18743;;Fatty acid synthesis
+FBgn0013277;CG31449;;Fatty acid synthesis
+FBgn0013278;CG31359;;Fatty acid synthesis
+FBgn0013279;CG6489;;Fatty acid synthesis
+FBgn0013683;CG34086;;Fatty acid synthesis
+FBgn0013684;CG34083;;Fatty acid synthesis
+FBgn0015245;CG12101;;Fatty acid synthesis
+FBgn0017566;CG2286;;Fatty acid synthesis
+FBgn0017567;CG3944;;Fatty acid synthesis
+FBgn0020764;CG3017;;Fatty acid synthesis
+FBgn0023169;CG3051;;Fatty acid synthesis
+FBgn0023550;CG18031;;Fatty acid synthesis
+FBgn0025839;CG3621;;Fatty acid synthesis
+FBgn0026718;CG17608;;Fatty acid synthesis
+FBgn0026761;CG3152;;Fatty acid synthesis
+FBgn0027083;CG31322;;Fatty acid synthesis
+FBgn0027572;CG5009;;Fatty acid synthesis
+FBgn0027579;CG5508;;Fatty acid synthesis
+FBgn0027780;CG13401;;Fatty acid synthesis
+FBgn0029172;CG7923;;Fatty acid synthesis
+FBgn0029821;CG4020;;Fatty acid synthesis
+FBgn0029924;CG4586;;Fatty acid synthesis
+FBgn0030421;CG3812;;Fatty acid synthesis
+FBgn0031069;CG12703;;Fatty acid synthesis
+FBgn0031132;CG15450;;Fatty acid synthesis
+FBgn0031436;CG3214;;Fatty acid synthesis
+FBgn0031813;CG9527;;Fatty acid synthesis
+FBgn0031815;CG9526;;Fatty acid synthesis
+FBgn0031824;CG9547;;Fatty acid synthesis
+FBgn0032055;CG13091;;Fatty acid synthesis
+FBgn0032646;CG6412;;Fatty acid synthesis
+FBgn0032775;CG17544;;Fatty acid synthesis
+FBgn0032881;CG9319;;Fatty acid synthesis
+FBgn0033246;CG11198;;Fatty acid synthesis
+FBgn0033464;CG1441;;Fatty acid synthesis
+FBgn0033949;CG10131;;Fatty acid synthesis
+FBgn0034142;CG8306;;Fatty acid synthesis
+FBgn0034143;CG8303;;Fatty acid synthesis
+FBgn0034145;CG5065;;Fatty acid synthesis
+FBgn0034259;CG6459;;Fatty acid synthesis
+FBgn0034432;CG7461;;Fatty acid synthesis
+FBgn0034628;CG9707;;Fatty acid synthesis
+FBgn0034629;CG9709;;Fatty acid synthesis
+FBgn0034971;CG3209;;Fatty acid synthesis
+FBgn0035811;CG12262;;Fatty acid synthesis
+FBgn0035911;CG6638;;Fatty acid synthesis
+FBgn0036622;CG4753;;Fatty acid synthesis
+FBgn0036623;CG4729;;Fatty acid synthesis
+FBgn0036763;CG7441;;Fatty acid synthesis
+FBgn0036824;CG3902;;Fatty acid synthesis
+FBgn0036892;CG8798;;Fatty acid synthesis
+FBgn0037172;CG6914;;Fatty acid synthesis
+FBgn0037332;CG14670;;Fatty acid synthesis
+FBgn0037762;CG16905;;Fatty acid synthesis
+FBgn0037778;CG3910;;Fatty acid synthesis
+FBgn0037913;CG6783;;Fatty acid synthesis
+FBgn0037999;CG4860;;Fatty acid synthesis
+FBgn0038032;CG10096;;Fatty acid synthesis
+FBgn0038033;CG10097;;Fatty acid synthesis
+FBgn0038449;CG17562;;Fatty acid synthesis
+FBgn0038450;CG17560;;Fatty acid synthesis
+FBgn0038451;CG14893;;Fatty acid synthesis
+FBgn0038584;CG7175;;Fatty acid synthesis
+FBgn0038742;CG4703;;Fatty acid synthesis
+FBgn0038751;CG4770;;Fatty acid synthesis
+FBgn0039131;CG12268;;Fatty acid synthesis
+FBgn0039620;CG1443;;Fatty acid synthesis
+FBgn0039890;CG2316;;Fatty acid synthesis
+FBgn0040918;CG3576;;Fatty acid synthesis
+FBgn0042627;CG3524;;Fatty acid synthesis
+FBgn0043792;CG30427;;Fatty acid synthesis
+FBgn0050108;CG30108;;Fatty acid synthesis
+FBgn0050109;CG30109;;Fatty acid synthesis
+FBgn0052072;CG32072;;Fatty acid synthesis
+FBgn0052699;CG32699;;Fatty acid synthesis
+FBgn0085371;CG34342;;Fatty acid synthesis
+FBgn0086370;CG6072;;Fatty acid synthesis
+FBgn0086687;CG5887;;Fatty acid synthesis
+FBgn0086712;CG9006;;Fatty acid synthesis
+FBgn0261283;CG8522;;Fatty acid synthesis
+FBgn0261381;CG42631;;Fatty acid synthesis
+FBgn0262952;CG34085;;Fatty acid synthesis
+FBgn0263593;CG8709;;Fatty acid synthesis
+FBgn0264357;CG17299;;Fatty acid synthesis
+FBgn0267828;CG46149;;Fatty acid synthesis
+FBgn0286508;;;Fatty acid synthesis

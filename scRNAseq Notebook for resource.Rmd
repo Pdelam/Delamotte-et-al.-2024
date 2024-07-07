@@ -1,0 +1,1162 @@
+---
+title: "scRNAseq tumors analysis"
+output: html_notebook
+---
+## Troubleshooting ##
+
+install.packages("pacman")
+library("pacman")
+p_unlock()
+
+remove.packages("rlang")
+install.packages("rlang")
+
+install.packages("xfun")
+install.packages("processx")
+install.packages("Matrix")
+
+## Packages ##
+
+install.packages("dplyr")
+install.packages("Seurat")
+install.packages("patchwork")
+install.packages("ggplot2")
+install.packages("data.table")
+install.packages("openxlsx")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("pathview")
+BiocManager::install("clusterProfiler")
+BiocManager::install("enrichplot")
+BiocManager::install("ggupset")
+install.packages("wordcloud")
+organism = "org.Dm.eg.db"
+BiocManager::install(organism, character.only = TRUE)
+BiocManager::install("Rgraphviz")
+BiocManager::install("grid")
+BiocManager::install("IRanges")
+BiocManager::install("S4Vectors")
+BiocManager::install("AnnotationDbi")
+BiocManager::install("SparseM")
+BiocManager::install("topGO")
+if (!any(rownames(installed.packages()) == "pathview")){
+  if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+  BiocManager::install("pathview")
+  BiocManager::install("KEGGREST")
+}
+install.packages("remotes")
+install.packages("SeuratWrappers")
+install.packages("harmony")
+install.packages("rliger")
+install.packages("reshape2")
+install.packages("RColorBrewer")
+install.packages("ggvenn")
+install.packages("devtools")
+devtools::install_github("yanlinlin82/ggvenn")
+devtools::install_github("gaospecial/ggVennDiagram")
+
+## Libraries ##
+```{r}
+library("dplyr")
+library("Seurat")
+library("patchwork")
+library("ggplot2")
+library("data.table")
+library("openxlsx")
+library("pathview")
+library("clusterProfiler")
+library("wordcloud")
+library("enrichplot")
+library("ggupset")
+library("KEGGREST")
+organism ="org.Dm.eg.db"
+library(organism, character.only = TRUE)
+library(KEGGREST)
+library(org.Dm.eg.db)
+library(pathview)
+library("Rgraphviz")
+library("grid")
+library("IRanges")
+library("S4Vectors")
+library("AnnotationDbi")
+library("SparseM")
+library("remotes")
+library("harmony")
+library("rliger")
+library("reshape2")
+library("RColorBrewer")
+library("ggvenn")
+library("ggVennDiagram")
+
+
+```
+
+## Variables and lists
+```{r}
+mito_limit <- 15
+
+mito_genes <- c("FBgn0013686", "FBgn0013679", "FBgn0013680", "FBgn0013681", "FBgn0262952", "FBgn0013683", "FBgn0013684","FBgn0013685", "FBgn0013688", "FBgn0013689", "FBgn0013704", "FBgn0013701", "FBgn0013691","FBgn0013690", "FBgn0013703", "FBgn0013692", "FBgn0013694", "FBgn0013695", "FBgn0013696", "FBgn0013699","FBgn0013698", "FBgn0013697", "FBgn0013700", "FBgn0013693", "FBgn0013702", "FBgn0013705", "FBgn0013706","FBgn0013707", "FBgn0013709", "FBgn0013710", "FBgn0013708")
+
+markers_gut <- c("FBgn0004837", "FBgn0287768", "FBgn0086347", "FBgn0085424", "FBgn0004595", "FBgn0264953", "FBgn0284084", "FBgn0003984", "FBgn0004956", "FBgn0015591", "FBgn0036713", "FBgn0032336", "FBgn0037976", "FBgn0027109", "FBgn0032048", "FBgn0038199", "FBgn0038147", "FBgn0034935", "FBgn0038901", "FBgn0003205")
+
+names(markers_gut) <- c("Su(H)", "escargot", "Myosin31DF", "nubbin", "prospero", "Piezo", "Wingless", "Vein", "Unpaired1", "AstA", "AstB", "AstC", "Tachykinin", "neuropeptide F", "DH31", "CCHa1", "CCHa2", "Orcokinin B", "Bursicon", "Ras85D")
+
+FACS <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\FACS.csv", 
+                  header=T, sep=";", dec=".")
+METAB <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\METAB.csv", 
+                  header=T, sep=";", dec=".")
+MOTILITY <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\MOTILITY.csv", 
+                  header=T, sep=";", dec=".")
+TUMOR <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\TUMOR.csv", 
+                  header=T, sep=";", dec=".")
+ULTIMATE <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\ULTIMATE.csv", 
+                  header=T, sep=";", dec=".")
+KEGG <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\KEGG.csv", 
+                  header=T, sep=";", dec=".")
+```
+
+## Quality control and Normalization for each sample; 
+# Only use CellRanger filtered matrix that contains 'good' quality cells
+# Here, the objective is to compare samples individually and to visualize any gene expression variablity
+```{r}
+T1.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\T1test\\filtered_feature_bc_matrix\\")
+T1 <- CreateSeuratObject(counts=T1.data, project="T1test")
+
+T2.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\T2test\\filtered_feature_bc_matrix\\")
+T2 <- CreateSeuratObject(counts=T2.data, project="T2test")
+
+J74.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO74\\filtered_feature_bc_matrix\\")
+J74 <- CreateSeuratObject(counts=J74.data, project="JAMO74")
+
+J75.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO75\\filtered_feature_bc_matrix\\")
+J75 <- CreateSeuratObject(counts=J75.data, project="JAMO75")
+
+J78.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO78\\filtered_feature_bc_matrix\\")
+J78 <- CreateSeuratObject(counts=J78.data, project="JAMO78")
+
+#J79.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO79\\filtered_feature_bc_matrix\\")
+#J79 <- CreateSeuratObject(counts=J79.data, project="JAMO79")
+
+J80.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO80\\filtered_feature_bc_matrix\\")
+J80 <- CreateSeuratObject(counts=J80.data, project="JAMO80")
+
+J81.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO81\\filtered_feature_bc_matrix\\")
+J81 <- CreateSeuratObject(counts=J81.data, project="JAMO81")
+
+# Normalizing the samples
+T1[["percent.mt"]] <- PercentageFeatureSet(object = T1, features = mito_genes) 
+T2[["percent.mt"]] <- PercentageFeatureSet(object = T2, features = mito_genes) 
+J74[["percent.mt"]] <- PercentageFeatureSet(object = J74, features = mito_genes) 
+J75[["percent.mt"]] <- PercentageFeatureSet(object = J75, features = mito_genes) 
+J78[["percent.mt"]] <- PercentageFeatureSet(object = J78, features = mito_genes) 
+#J79[["percent.mt"]] <- PercentageFeatureSet(object = J79, features = mito_genes) 
+J80[["percent.mt"]] <- PercentageFeatureSet(object = J80, features = mito_genes) 
+J81[["percent.mt"]] <- PercentageFeatureSet(object = J81, features = mito_genes)
+
+#JAMO74
+J74 <- subset(J74, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+J74 <- NormalizeData(J74, normalization.method = "LogNormalize", scale.factor = 10000)
+J74 <- FindVariableFeatures(J74, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(J74)
+J74 <- ScaleData(J74, features = all.genes)
+J74 <- RunPCA(J74, features = VariableFeatures(object = J74))
+J74 <- JackStraw(J74, num.replicate = 100)
+J74 <- ScoreJackStraw(J74, dims = 1:20)
+J74 <- FindNeighbors(J74, dims = 1:10)
+J74 <- FindClusters(J74, resolution = 0.5)
+J74 <- RunUMAP(J74, dims = 1:10)
+FeaturePlot(J74, features = markers_gut)
+VlnPlot(J74, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(J74, features=ULTIMATE$X.SUBMITTED.ID) 
+DoHeatmap(J74, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+```{r}
+#JAMO75
+J75 <- subset(J75, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+J75 <- NormalizeData(J75, normalization.method = "LogNormalize", scale.factor = 10000)
+J75 <- FindVariableFeatures(J75, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(J75)
+J75 <- ScaleData(J75, features = all.genes)
+J75 <- RunPCA(J75, features = VariableFeatures(object = J75))
+J75 <- JackStraw(J75, num.replicate = 100)
+J75 <- ScoreJackStraw(J75, dims = 1:20)
+J75 <- FindNeighbors(J75, dims = 1:10)
+J75 <- FindClusters(J75, resolution = 0.5)
+J75 <- RunUMAP(J75, dims = 1:10)
+FeaturePlot(J75, features = markers_gut)
+VlnPlot(J75, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(J75, features=ULTIMATE$X.SUBMITTED.ID) 
+DoHeatmap(J75, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+```{r}
+#JAMO78
+J78 <- subset(J78, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+J78 <- NormalizeData(J78, normalization.method = "LogNormalize", scale.factor = 10000)
+J78 <- FindVariableFeatures(J78, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(J78)
+J78 <- ScaleData(J78, features = all.genes)
+J78 <- RunPCA(J78, features = VariableFeatures(object = J78))
+J78 <- JackStraw(J78, num.replicate = 100)
+J78 <- ScoreJackStraw(J78, dims = 1:20)
+J78 <- FindNeighbors(J78, dims = 1:10)
+J78 <- FindClusters(J78, resolution = 0.5)
+J78 <- RunUMAP(J78, dims = 1:10)
+FeaturePlot(J78, features = markers_gut)
+VlnPlot(J78, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(J78, features=ULTIMATE$X.SUBMITTED.ID)
+DoHeatmap(J78, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+```{r}
+#JAMO80
+J80 <- subset(J80, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+J80 <- NormalizeData(J80, normalization.method = "LogNormalize", scale.factor = 10000)
+J80 <- FindVariableFeatures(J80, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(J80)
+J80 <- ScaleData(J80, features = all.genes)
+J80 <- RunPCA(J80, features = VariableFeatures(object = J80))
+J80 <- JackStraw(J80, num.replicate = 100)
+J80 <- ScoreJackStraw(J80, dims = 1:20)
+J80 <- FindNeighbors(J80, dims = 1:10)
+J80 <- FindClusters(J80, resolution = 0.5)
+J80 <- RunUMAP(J80, dims = 1:10)
+FeaturePlot(J80, features = markers_gut)
+VlnPlot(J80, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(J80, features=ULTIMATE$X.SUBMITTED.ID)
+DoHeatmap(J80, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+```{r}
+#JAMO81
+J81 <- subset(J81, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+J81 <- NormalizeData(J81, normalization.method = "LogNormalize", scale.factor = 10000)
+J81 <- FindVariableFeatures(J81, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(J81)
+J81 <- ScaleData(J81, features = all.genes)
+J81 <- RunPCA(J81, features = VariableFeatures(object = J81))
+J81 <- JackStraw(J81, num.replicate = 100)
+J81 <- ScoreJackStraw(J81, dims = 1:20)
+J81 <- FindNeighbors(J81, dims = 1:10)
+J81 <- FindClusters(J81, resolution = 0.5)
+J81 <- RunUMAP(J81, dims = 1:10)
+FeaturePlot(J81, features = markers_gut)
+VlnPlot(J81, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(J81, features=ULTIMATE$X.SUBMITTED.ID)
+DoHeatmap(J81, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+```{r}
+#T1
+T1 <- subset(T1, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+T1 <- NormalizeData(T1, normalization.method = "LogNormalize", scale.factor = 10000)
+T1 <- FindVariableFeatures(T1, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(T1)
+T1 <- ScaleData(T1, features = all.genes)
+T1 <- RunPCA(T1, features = VariableFeatures(object = T1))
+T1 <- JackStraw(T1, num.replicate = 100)
+T1 <- ScoreJackStraw(T1, dims = 1:20)
+T1 <- FindNeighbors(T1, dims = 1:10)
+T1 <- FindClusters(T1, resolution = 0.5)
+T1 <- RunUMAP(T1, dims = 1:10)
+FeaturePlot(T1, features = markers_gut)
+VlnPlot(T1, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(T1, features=ULTIMATE$X.SUBMITTED.ID)
+DoHeatmap(T1, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+```{r}
+#T2
+T2 <- subset(T2, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+T2 <- NormalizeData(T2, normalization.method = "LogNormalize", scale.factor = 10000)
+T2 <- FindVariableFeatures(T2, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(T2)
+T2 <- ScaleData(T2, features = all.genes)
+T2 <- RunPCA(T2, features = VariableFeatures(object = T2))
+T2 <- JackStraw(T2, num.replicate = 100)
+T2 <- ScoreJackStraw(T2, dims = 1:20)
+T2 <- FindNeighbors(T2, dims = 1:10)
+T2 <- FindClusters(T2, resolution = 0.5)
+T2 <- RunUMAP(T2, dims = 1:10)
+FeaturePlot(T2, features = markers_gut)
+VlnPlot(T2, features = markers_gut, log = TRUE)
+tumor_seurat <- ScaleData(T2, features=ULTIMATE$X.SUBMITTED.ID)
+DoHeatmap(T2, features = ULTIMATE$X.SUBMITTED.ID)
+```
+
+#end of session ----------------------------------------------------------------
+
+## Loading samples - Quality control and Normalization - data integration
+# Here, the objective is to pool samples to have a better cluster resolution
+```{r}
+T1.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\T1test\\filtered_feature_bc_matrix\\") 
+T1 <- CreateSeuratObject(counts=T1.data, project="T1test")
+
+T2.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\T2test\\filtered_feature_bc_matrix\\") 
+T2 <- CreateSeuratObject(counts=T2.data, project="T2test")
+
+J74.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO74\\filtered_feature_bc_matrix\\") 
+J74 <- CreateSeuratObject(counts=J74.data, project="JAMO74")
+
+J75.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO75\\filtered_feature_bc_matrix\\") 
+J75 <- CreateSeuratObject(counts=J75.data, project="JAMO75")
+
+J78.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO78\\filtered_feature_bc_matrix\\") 
+J78 <- CreateSeuratObject(counts=J78.data, project="JAMO78")
+
+J80.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO80\\filtered_feature_bc_matrix\\") 
+J80 <- CreateSeuratObject(counts=J80.data, project="JAMO80")
+
+J81.data <- Read10X("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\23-D0337A Final experiment\\counts\\JAMO81\\filtered_feature_bc_matrix\\") 
+J81 <- CreateSeuratObject(counts=J81.data, project="JAMO81")
+
+T1[["percent.mt"]] <- PercentageFeatureSet(object = T1, features = mito_genes)
+T2[["percent.mt"]] <- PercentageFeatureSet(object = T2, features = mito_genes)
+J74[["percent.mt"]] <- PercentageFeatureSet(object = J74, features = mito_genes)
+J75[["percent.mt"]] <- PercentageFeatureSet(object = J75, features = mito_genes)
+J78[["percent.mt"]] <- PercentageFeatureSet(object = J78, features = mito_genes)
+J80[["percent.mt"]] <- PercentageFeatureSet(object = J80, features = mito_genes)
+J81[["percent.mt"]] <- PercentageFeatureSet(object = J81, features = mito_genes)
+
+# T1 quality control
+VlnPlot(T1, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(T1, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(T1, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+T1 <- subset(T1, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+
+# T2 quality control
+VlnPlot(T2, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(T2, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(T2, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+T2 <- subset(T2, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+
+# JAMO74 quality control
+VlnPlot(J74, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(J74, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(J74, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+J74 <- subset(J74, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+
+# JAMO75 quality control
+VlnPlot(J75, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(J75, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(J75, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+J75 <- subset(J75, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+
+# JAMO78 quality control
+VlnPlot(J78, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(J78, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(J78, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+J78 <- subset(J78, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+
+# JAMO80 quality control
+VlnPlot(J80, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(J80, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(J80, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+J80 <- subset(J80, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+
+# JAMO81 quality control
+VlnPlot(J81, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(J81, feature1 = "nCount_RNA", feature2 = "percent.mt")
+plot2 <- FeatureScatter(J81, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+plot1 + plot2
+J81 <- subset(J81, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+```
+
+```{r}
+# Comparing datasets
+single_tumor <- list()
+single_tumor[["T1test"]] <- T1
+single_tumor[["T2test"]] <- T2
+single_tumor[["JAMO74"]] <- J74
+single_tumor[["JAMO75"]] <- J75
+single_tumor[["JAMO78"]] <- J78
+single_tumor[["JAMO80"]] <- J80
+single_tumor[["JAMO81"]] <- J81
+
+for (i in 1:length(single_tumor)) {
+  single_tumor[[i]] <- NormalizeData(single_tumor[[i]], verbose = F)
+  single_tumor[[i]] <- FindVariableFeatures(single_tumor[[i]], selection.method = "vst", nfeatures = 2000, verbose = F)
+}
+
+tumor_anchors <- FindIntegrationAnchors(object.list = single_tumor, dims = 1:30)
+
+tumor_seurat <- IntegrateData(anchorset = tumor_anchors, dims = 1:30)
+
+rm(single_tumor)
+rm(tumor_anchors)
+
+# Before integration
+DefaultAssay(tumor_seurat) <- "RNA"
+tumor_seurat <- NormalizeData(tumor_seurat, verbose = F)
+tumor_seurat <- FindVariableFeatures(tumor_seurat, selection.method = "vst", nfeatures = 2000, verbose = F)
+tumor_seurat <- ScaleData(tumor_seurat, verbose = F)
+tumor_seurat <- RunPCA(tumor_seurat, npcs = 30, verbose = F)
+tumor_seurat <- RunUMAP(tumor_seurat, reduction = "pca", dims = 1:30, verbose = F)
+DimPlot(tumor_seurat,reduction = "umap") 
+
+#After integration
+DefaultAssay(tumor_seurat) <- "integrated"
+tumor_seurat <- ScaleData(tumor_seurat, verbose = F)
+tumor_seurat <- RunPCA(tumor_seurat, npcs = 30, verbose = F)
+tumor_seurat <- RunUMAP(tumor_seurat, reduction = "pca", dims = 1:30, verbose = F)
+
+DimPlot(tumor_seurat,reduction = "umap", label.size = 7, pt.size=1) 
+
+DimPlot(tumor_seurat, reduction = "umap", split.by = "orig.ident") + NoLegend()
+
+##Adding integrated matrix
+tumor_seurat <- FindNeighbors(tumor_seurat, dims = 1:30, k.param = 10, verbose = F)
+tumor_seurat <- FindClusters(tumor_seurat, verbose = F)
+DimPlot(tumor_seurat,label = T, label.size = 7, pt.size=1) + NoLegend()
+
+DimPlot(tumor_seurat,label = T, label.size = 7, pt.size=1, split.by = "orig.ident")
+
+VlnPlot(tumor_seurat, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+plot1 <- FeatureScatter(tumor_seurat, feature1 = "nCount_RNA", feature2 = "percent.mt", split.by = "orig.ident")
+plot2 <- FeatureScatter(tumor_seurat, feature1 = "nCount_RNA", feature2 = "nFeature_RNA", split.by = "orig.ident")
+
+
+```
+
+```{r}
+## Cluster counts
+count_table <- table(tumor_seurat@meta.data$seurat_clusters, tumor_seurat@meta.data$orig.ident)
+count_table
+```
+#Repeating cluster analysis on the pool
+#Here, instead of analyzing a single sample, the previous analysis is repeated on all the sequencings that have been merged
+```{r}
+pool.markers <- FindAllMarkers(tumor_seurat, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
+pool.markers %>%
+  group_by(cluster) %>%
+  slice_max(n = 2, order_by = avg_log2FC)
+
+FeaturePlot(tumor_seurat, features = markers_gut, coord.fixed = T)
+VlnPlot(tumor_seurat, features = markers_gut, log = TRUE)
+
+```
+
+##Exploring groups of genes
+```{r}
+#FACS analyzed genes
+FACS <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\FACS.csv", 
+                  header=T, sep=";", dec=".")
+
+pool_FACS <- pool.markers[which(pool.markers$gene %in% FACS$FBgn & abs(pool.markers$avg_log2FC) > 1),]
+
+tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_FACS$gene)), assay = "RNA")    
+DoHeatmap(tumor_seurat, features = as.character(unique(pool_FACS$gene)), assay = "RNA")
+
+DotPlot(tumor_seurat, features = as.character(unique(pool_FACS$gene)))+ 
+theme(axis.text.x = element_text(angle = 90))+
+coord_flip()
+```
+
+```{r}
+#Metabolic genes
+METAB <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\METAB.csv", 
+                  header=T, sep=";", dec=".")
+Gene_list <- c()
+
+#Glycolysis
+  Glyco <- METAB[which(METAB$Group == "Glycolysis"),]
+
+  pool_Glyco <- pool.markers[which(pool.markers$gene %in% Glyco$FBgn & abs(pool.markers$avg_log2FC) > 1),]
+  
+  Gene_list <- c(Gene_list, pool_Glyco$gene)
+
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_Glyco$gene)), assay = "RNA")    
+  DoHeatmap(tumor_seurat, features = pool_Glyco$gene)
+```
+
+```{r}
+#TCA
+  TCA <- METAB[which(METAB$Group == "TCA"),]
+
+  pool_TCA <- pool.markers[which(pool.markers$gene %in% TCA$FBgn & abs(pool.markers$avg_log2FC) > 1),]
+  
+  Gene_list <- c(Gene_list, pool_TCA$gene)
+
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_TCA$gene)), assay = "RNA")    
+  DoHeatmap(tumor_seurat, features = pool_TCA$gene)
+```
+
+```{r}
+#Mitochondria electron transfer genes
+  ETC <- METAB[which(METAB$Group == "mitochondria electron transfer chain"),]
+
+  pool_ETC <- pool.markers[which(pool.markers$gene %in% ETC$FBgn & abs(pool.markers$avg_log2FC) > 1),]
+  
+  Gene_list <- c(Gene_list, pool_ETC$gene)
+
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_ETC$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_ETC$gene)
+```
+
+```{r}
+#Fatty acid synthesis
+  FA <- METAB[which(METAB$Group == "Fatty acid synthesis"),]
+
+  pool_FA <- pool.markers[which(pool.markers$gene %in% FA$FBgn & abs(pool.markers$avg_log2FC) > 1),]
+  
+  Gene_list <- c(Gene_list, pool_FA$gene)
+
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_FA$gene)), assay = "RNA")    
+  DoHeatmap(tumor_seurat, features = pool_FA$gene)
+```
+
+```{r}
+#Gluconeogenesis
+  Glu <- METAB[which(METAB$Group == "Gluconeogenesis"),]
+
+  pool_Glu <- pool.markers[which(pool.markers$gene %in% Glu$FBgn & abs(pool.markers$avg_log2FC) > 1),]
+  
+  Gene_list <- c(Gene_list, pool_Glu$gene)
+
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_Glu$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_Glu$gene)
+```
+
+```{r}
+#Selected metabolic markers (Genes retrieved from previous analyses were compiled in the "ULTIMATE" CSV file)
+ULTIMATE <- read.csv2("C:\\Users\\pierre.delamotte\\Documents\\DOCTORAT\\Tumors\\Single cell RNAseq\\Pool\\ULTIMATE.csv", 
+                  header=T, sep=";", dec=".")
+
+pool_ultimate <- pool.markers[which(pool.markers$gene %in% ULTIMATE$X.SUBMITTED.ID),]
+
+tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_ultimate$gene)), assay = "RNA")    
+DoHeatmap(tumor_seurat, features = as.character(unique(pool_ultimate$gene)), assay = "RNA")
+DotPlot(tumor_seurat, features = as.character(unique(pool_ultimate$gene)))+ 
+theme(axis.text.x = element_text(angle = 90))+
+coord_flip()
+```
+
+#End of session ----------------------------------------------------------------
+
+##Pathview
+```{r}
+# T2 ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+T2.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\T2test\\filtered_feature_bc_matrix\\") 
+T2 <- CreateSeuratObject(counts=T2.data, project="T2test")
+# Mitochondrial genes to specify and quality control
+T2[["percent.mt"]] <- PercentageFeatureSet(object = T2, features = mito_genes)
+T2 <- subset(T2, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+T2 <- NormalizeData(T2, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+T2 <- FindVariableFeatures(T2, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(T2), 10)
+# Scaling the data
+all.genes <- rownames(T2)
+T2 <- ScaleData(T2, features = all.genes)
+# Perform linear dimensional reduction
+T2 <- RunPCA(T2, features = VariableFeatures(object = T2))
+VizDimLoadings(T2, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+T2 <- JackStraw(T2, num.replicate = 100) 
+T2 <- ScoreJackStraw(T2, dims = 1:20)
+# Clustering
+T2 <- FindNeighbors(T2, dims = 1:10) 
+T2 <- FindClusters(T2, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(T2), 20)
+# UMAP/tSNE
+T2 <- RunUMAP(T2, dims = 1:10)
+# Finding differentially expressed features
+T2.markers <- FindAllMarkers(T2, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+T2.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# T2 ------------------------------------------------------------------------------------------------------------
+# T1 ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+T1.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\T1test\\filtered_feature_bc_matrix\\") 
+T1 <- CreateSeuratObject(counts=T1.data, project="T1test")
+# Mitochondrial genes to specify and quality control
+T1[["percent.mt"]] <- PercentageFeatureSet(object = T1, features = mito_genes)
+T1 <- subset(T1, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+T1 <- NormalizeData(T1, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+T1 <- FindVariableFeatures(T1, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(T1), 10)
+# Scaling the data
+all.genes <- rownames(T1)
+T1 <- ScaleData(T1, features = all.genes)
+# Perform linear dimensional reduction
+T1 <- RunPCA(T1, features = VariableFeatures(object = T1))
+VizDimLoadings(T1, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+T1 <- JackStraw(T1, num.replicate = 100) 
+T1 <- ScoreJackStraw(T1, dims = 1:20)
+# Clustering
+T1 <- FindNeighbors(T1, dims = 1:10) 
+T1 <- FindClusters(T1, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(T1), 20)
+# UMAP/tSNE
+T1 <- RunUMAP(T1, dims = 1:10)
+# Finding differentially expressed features
+T1.markers <- FindAllMarkers(T1, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+T1.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# T1 ------------------------------------------------------------------------------------------------------------
+# JAMO74  ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+JAMO74.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\JAMO74\\filtered_feature_bc_matrix\\") 
+JAMO74 <- CreateSeuratObject(counts=JAMO74.data, project="JAMO74test")
+# Mitochondrial genes to specify and quality control
+JAMO74[["percent.mt"]] <- PercentageFeatureSet(object = JAMO74, features = mito_genes)
+JAMO74 <- subset(JAMO74, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+JAMO74 <- NormalizeData(JAMO74, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+JAMO74 <- FindVariableFeatures(JAMO74, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(JAMO74), 10)
+# Scaling the data
+all.genes <- rownames(JAMO74)
+JAMO74 <- ScaleData(JAMO74, features = all.genes)
+# Perform linear dimensional reduction
+JAMO74 <- RunPCA(JAMO74, features = VariableFeatures(object = JAMO74))
+VizDimLoadings(JAMO74, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+JAMO74 <- JackStraw(JAMO74, num.replicate = 100) 
+JAMO74 <- ScoreJackStraw(JAMO74, dims = 1:20)
+# Clustering
+JAMO74 <- FindNeighbors(JAMO74, dims = 1:10) 
+JAMO74 <- FindClusters(JAMO74, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(JAMO74), 20)
+# UMAP/tSNE
+JAMO74 <- RunUMAP(JAMO74, dims = 1:10)
+# Finding differentially expressed features
+JAMO74.markers <- FindAllMarkers(JAMO74, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+JAMO74.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# JAMO74 ------------------------------------------------------------------------------------------------------------
+# JAMO75  ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+JAMO75.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\JAMO75\\filtered_feature_bc_matrix\\") 
+JAMO75 <- CreateSeuratObject(counts=JAMO75.data, project="JAMO75test")
+# Mitochondrial genes to specify and quality control
+JAMO75[["percent.mt"]] <- PercentageFeatureSet(object = JAMO75, features = mito_genes)
+JAMO75 <- subset(JAMO75, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+JAMO75 <- NormalizeData(JAMO75, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+JAMO75 <- FindVariableFeatures(JAMO75, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(JAMO75), 10)
+# Scaling the data
+all.genes <- rownames(JAMO75)
+JAMO75 <- ScaleData(JAMO75, features = all.genes)
+# Perform linear dimensional reduction
+JAMO75 <- RunPCA(JAMO75, features = VariableFeatures(object = JAMO75))
+VizDimLoadings(JAMO75, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+JAMO75 <- JackStraw(JAMO75, num.replicate = 100) 
+JAMO75 <- ScoreJackStraw(JAMO75, dims = 1:20)
+# Clustering
+JAMO75 <- FindNeighbors(JAMO75, dims = 1:10) 
+JAMO75 <- FindClusters(JAMO75, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(JAMO75), 20)
+# UMAP/tSNE
+JAMO75 <- RunUMAP(JAMO75, dims = 1:10)
+# Finding differentially expressed features
+JAMO75.markers <- FindAllMarkers(JAMO75, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+JAMO75.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# JAMO75 ------------------------------------------------------------------------------------------------------------
+# JAMO78  ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+JAMO78.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\JAMO78\\filtered_feature_bc_matrix\\") 
+JAMO78 <- CreateSeuratObject(counts=JAMO78.data, project="JAMO78test")
+# Mitochondrial genes to specify and quality control
+JAMO78[["percent.mt"]] <- PercentageFeatureSet(object = JAMO78, features = mito_genes)
+JAMO78 <- subset(JAMO78, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+JAMO78 <- NormalizeData(JAMO78, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+JAMO78 <- FindVariableFeatures(JAMO78, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(JAMO78), 10)
+# Scaling the data
+all.genes <- rownames(JAMO78)
+JAMO78 <- ScaleData(JAMO78, features = all.genes)
+# Perform linear dimensional reduction
+JAMO78 <- RunPCA(JAMO78, features = VariableFeatures(object = JAMO78))
+VizDimLoadings(JAMO78, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+JAMO78 <- JackStraw(JAMO78, num.replicate = 100) 
+JAMO78 <- ScoreJackStraw(JAMO78, dims = 1:20)
+# Clustering
+JAMO78 <- FindNeighbors(JAMO78, dims = 1:10) 
+JAMO78 <- FindClusters(JAMO78, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(JAMO78), 20)
+# UMAP/tSNE
+JAMO78 <- RunUMAP(JAMO78, dims = 1:10)
+# Finding differentially expressed features
+JAMO78.markers <- FindAllMarkers(JAMO78, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+JAMO78.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# JAMO78 ------------------------------------------------------------------------------------------------------------
+# JAMO80  ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+JAMO80.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\JAMO80\\filtered_feature_bc_matrix\\") 
+JAMO80 <- CreateSeuratObject(counts=JAMO80.data, project="JAMO80test")
+# Mitochondrial genes to specify and quality control
+JAMO80[["percent.mt"]] <- PercentageFeatureSet(object = JAMO80, features = mito_genes)
+JAMO80 <- subset(JAMO80, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+JAMO80 <- NormalizeData(JAMO80, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+JAMO80 <- FindVariableFeatures(JAMO80, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(JAMO80), 10)
+# Scaling the data
+all.genes <- rownames(JAMO80)
+JAMO80 <- ScaleData(JAMO80, features = all.genes)
+# Perform linear dimensional reduction
+JAMO80 <- RunPCA(JAMO80, features = VariableFeatures(object = JAMO80))
+VizDimLoadings(JAMO80, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+JAMO80 <- JackStraw(JAMO80, num.replicate = 100) 
+JAMO80 <- ScoreJackStraw(JAMO80, dims = 1:20)
+# Clustering
+JAMO80 <- FindNeighbors(JAMO80, dims = 1:10) 
+JAMO80 <- FindClusters(JAMO80, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(JAMO80), 20)
+# UMAP/tSNE
+JAMO80 <- RunUMAP(JAMO80, dims = 1:10)
+# Finding differentially expressed features
+JAMO80.markers <- FindAllMarkers(JAMO80, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+JAMO80.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# JAMO80 ------------------------------------------------------------------------------------------------------------
+# JAMO81 ------------------------------------------------------------------------------------------------------------
+## Quality control and Normalization
+JAMO81.data <- Read10X("C:\\Users\\Pierre\\Documents\\Doctorat\\Tumeurs\\scRNAseq\\23-D0337A Final experiment\\counts\\JAMO81\\filtered_feature_bc_matrix\\") 
+JAMO81 <- CreateSeuratObject(counts=JAMO81.data, project="JAMO81test")
+# Mitochondrial genes to specify and quality control
+JAMO81[["percent.mt"]] <- PercentageFeatureSet(object = JAMO81, features = mito_genes)
+JAMO81 <- subset(JAMO81, subset = nFeature_RNA > 100 & nFeature_RNA < 2000 & percent.mt < mito_limit)
+# Normalization
+JAMO81 <- NormalizeData(JAMO81, normalization.method = "LogNormalize", scale.factor = 10000)
+# Identification of highly variable features
+JAMO81 <- FindVariableFeatures(JAMO81, selection.method = "vst", nfeatures = 2000)
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(JAMO81), 10)
+# Scaling the data
+all.genes <- rownames(JAMO81)
+JAMO81 <- ScaleData(JAMO81, features = all.genes)
+# Perform linear dimensional reduction
+JAMO81 <- RunPCA(JAMO81, features = VariableFeatures(object = JAMO81))
+VizDimLoadings(JAMO81, dims = 1:2, reduction = "pca")
+# Dimensionality of the dataset #
+JAMO81 <- JackStraw(JAMO81, num.replicate = 100) 
+JAMO81 <- ScoreJackStraw(JAMO81, dims = 1:20)
+# Clustering
+JAMO81 <- FindNeighbors(JAMO81, dims = 1:10) 
+JAMO81 <- FindClusters(JAMO81, resolution = 0.5)
+# Look at cluster IDs of the first 20 cells
+head(Idents(JAMO81), 20)
+# UMAP/tSNE
+JAMO81 <- RunUMAP(JAMO81, dims = 1:10)
+# Finding differentially expressed features
+JAMO81.markers <- FindAllMarkers(JAMO81, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25) 
+JAMO81.markers %>% 
+  group_by(cluster) %>% 
+  slice_max(n = 2, order_by = avg_log2FC)
+# JAMO81 -----------------------------------------------------------------------------------------------------------
+```
+# GO analysis for each sample
+```{r}
+# T1-------------------------------------------
+data2 <- as.data.frame(as.matrix(T1.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+C6 <- row.names(data2[data2$cluster == 6 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5,
+                                  "cluster 6"=C6)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF T1")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP T1")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC T1")
+#---------------------------------------------------------
+# T2-------------------------------------------
+data2 <- as.data.frame(as.matrix(T2.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+C6 <- row.names(data2[data2$cluster == 6 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5,
+                                  "cluster 6"=C6)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF T2")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP T2")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC T2")
+#---------------------------------------------------------
+# JAMO74-------------------------------------------
+data2 <- as.data.frame(as.matrix(JAMO74.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+C6 <- row.names(data2[data2$cluster == 6 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5,
+                                  "cluster 6"=C6)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF JAMO74")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP JAMO74")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC JAMO74")
+#---------------------------------------------------------
+# JAMO75-------------------------------------------
+data2 <- as.data.frame(as.matrix(JAMO75.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF JAMO75")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP JAMO75")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC JAMO75")
+#---------------------------------------------------------
+# JAMO78-------------------------------------------
+data2 <- as.data.frame(as.matrix(JAMO78.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF JAMO75")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP JAMO75")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC JAMO75")
+#---------------------------------------------------------
+
+# JAMO80-------------------------------------------
+data2 <- as.data.frame(as.matrix(JAMO80.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+C6 <- row.names(data2[data2$cluster == 6 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5,
+                                  "cluster 6"=C6)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF JAMO80")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP JAMO80")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC JAMO80")
+#---------------------------------------------------------
+# JAMO81-------------------------------------------
+data2 <- as.data.frame(as.matrix(JAMO81.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+C6 <- row.names(data2[data2$cluster == 6 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5,
+                                  "cluster 6"=C6)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=7, title="MF JAMO81")
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=7, title="BP JAMO81")
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, font.size=7, title="CC JAMO81")
+#---------------------------------------------------------
+
+# pool-------------------------------------------
+data2 <- as.data.frame(as.matrix(pool.markers))
+lapply(data2, head)
+
+C0 <- row.names(data2[data2$cluster == 0 ,])
+C1 <- row.names(data2[data2$cluster == 1 ,])
+C2 <- row.names(data2[data2$cluster == 2 ,])
+C3 <- row.names(data2[data2$cluster == 3 ,])
+C4 <- row.names(data2[data2$cluster == 4 ,])
+C5 <- row.names(data2[data2$cluster == 5 ,])
+C6 <- row.names(data2[data2$cluster == 6 ,])
+C7 <- row.names(data2[data2$cluster == 7 ,])
+C8 <- row.names(data2[data2$cluster == 8 ,])
+C9 <- row.names(data2[data2$cluster == 9 ,])
+C10 <- row.names(data2[data2$cluster == 10 ,])
+C11 <- row.names(data2[data2$cluster == 11 ,])
+C12 <- row.names(data2[data2$cluster == 12 ,])
+C13 <- row.names(data2[data2$cluster == 13 ,])
+C14 <- row.names(data2[data2$cluster == 14 ,])
+C15 <- row.names(data2[data2$cluster == 15 ,])
+
+enrich_gene_list_for_test <- list("cluster 0"=C0,"cluster 1"=C1,"cluster 2"=C2,
+                                  "cluster 3"=C3,"cluster 4"=C4,"cluster 5"=C5,
+                                  "cluster 6"=C6,"cluster 7"=C7,"cluster 8"=C8,
+                                  "cluster 9"=C9,"cluster 10"=C10,"cluster 11"=C11, 
+                                  "cluster 12"=C12,"cluster 13"=C13,"cluster 14"=C14,
+                                  "cluster 15"=C15)
+
+# Molecular Function
+MolecularFunction <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO <- as.data.frame(MolecularFunction, row.names=NULL)
+dotplot(MolecularFunction, showCategory = 5, font.size=14, title="MF pool")+
+  theme(axis.text.x = element_text(angle = 70, hjust = 1))+
+  scale_y_discrete(guide = guide_axis(n.dodge = 1.2))
+
+# Biological Processes
+BiologicalProcess <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO2 <- as.data.frame(BiologicalProcess, row.names=NULL)
+dotplot(BiologicalProcess, showCategory = 5, font.size=14, title="BP pool")+
+  theme(axis.text.x = element_text(angle = 70, hjust = 1))+
+  scale_y_discrete(guide = guide_axis(n.dodge = 1.2))
+
+# Cellular Component
+CellularComponent <- compareCluster(geneCluster = enrich_gene_list_for_test, fun = "enrichGO", OrgDb='org.Dm.eg.db', keyType = 'FLYBASE', ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 0.05, qvalueCutoff = 0.05)
+Markergenes_GO3 <- as.data.frame(CellularComponent, row.names=NULL)
+dotplot(CellularComponent, showCategory = 5, size = 5, font.size=14, title="CC pool")+
+  theme(axis.text.x = element_text(angle = 70, hjust = 1))+
+  scale_y_discrete(guide = guide_axis(n.dodge = 1.2))
+#---------------------------------------------------------
+
+```
+
+
+## Retrieving specific gene names from KEGG
+install.packages("KEGGREST")
+install.packages("plyr")
+#install.packages("gene2pathway")
+
+library("KEGGREST")
+library(plyr)
+
+pathway_id <- c("dme01200", "dme01210", "dme01212", "dme01230", "dme00010", "dme00020", "dme00030", "dme00500", "dme00620", "dme00630", "dme00190", "dme00061", "dme00062", "dme00071", "dme00250", "dme00670", "dme01232")
+names(pathway_id) <- c("Carbon metabolism", "2-Oxocarboxylic acid metabolism", "Fatty acid metabolism", "Biosynthesis of amino acids", "Glycolysis and Gluconeogenesis", "Citrate cycle (TCA cycle)", "Pentose phosphate pathway", "Starch and sucrose metabolism",
+"Glyoxylate and dicarboxylate metabolism", "Pyruvate metabolism", "Oxidative phosphorylation", "Fatty acid biosynthesis", "Fatty acid elongation", "Fatty acid degradation", "Alanine, aspartate and glutamate metabolism", "One carbon pool by folate", "Nucleotide metabolism")
+# Store gene lists in a list
+gene_lists <- list()
+# Loop through pathway IDs
+for (i in 1:length(pathway_id)) {
+  # Retrieve gene list for the current pathway
+  pathway_info <- keggGet(pathway_id[i])
+  # Check if gene list is available
+  if (!is.null(pathway_info[[1]]$GENE)) {
+    # Extract gene list
+    gene_list <- pathway_info[[1]]$GENE
+    # Filter gene list to keep only those starting with "Dmel"
+    dmel_genes <- gene_list[grep("^Dmel", gene_list)]
+    dmel_genes2 <- as.data.frame(as.matrix(dmel_genes))
+    write.xlsx(dmel_genes2, paste0(names(pathway_id)[i],".xlsx"), rowNames = T)
+    
+  } else {
+    cat("No gene list available for", names(pathway_id)[i], "\n")
+  }
+}
+# Cross-check FBgn from KEGG with FBgn from GO analysis
+
+
+```{r}
+#Glycolysis and neoglucogenesis
+  KEGG_glyco <- KEGG[which(KEGG$Function == "Glycolysis and neoglucogenesis"),]
+  pool_glyco <- pool.markers[which(pool.markers$gene %in% KEGG_glyco$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_glyco$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_glyco$gene)
+#Pyruvate
+  KEGG_Pyruvate <- KEGG[which(KEGG$Function == "Pyruvate metabolism"),]
+  pool_Pyruvate <- pool.markers[which(pool.markers$gene %in% KEGG_Pyruvate$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_Pyruvate$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_Pyruvate$gene)
+#OXPHOS
+  KEGG_OXPHOS <- KEGG[which(KEGG$Function == "OXPHOS"),]
+  pool_OXPHOS <- pool.markers[which(pool.markers$gene %in% KEGG_OXPHOS$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_OXPHOS$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_OXPHOS$gene)
+#TCA
+  KEGG_TCA <- KEGG[which(KEGG$Function == "TCA"),]
+  pool_TCA <- pool.markers[which(pool.markers$gene %in% KEGG_TCA$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_TCA$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_TCA$gene)
+#Lipid biosynthesis
+  KEGG_lipid <- KEGG[which(KEGG$Function == "FA biosynthesis"),]
+  pool_lipid <- pool.markers[which(pool.markers$gene %in% KEGG_lipid$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_lipid$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_lipid$gene)
+#Sucrose and starch
+  KEGG_starch <- KEGG[which(KEGG$Function == "Sucrose and starch"),]
+  pool_starch <- pool.markers[which(pool.markers$gene %in% KEGG_starch$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_starch$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_starch$gene)
+#Glyoxylate and dicarboxylate
+  KEGG_Glyoxylate <- KEGG[which(KEGG$Function == "Glyoxylate and dicarboxylate"),]
+  pool_Glyoxylate <- pool.markers[which(pool.markers$gene %in% KEGG_Glyoxylate$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_Glyoxylate$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_Glyoxylate$gene)
+#FA elongation
+  KEGG_elo <- KEGG[which(KEGG$Function == "FA elongation"),]
+  pool_elo <- pool.markers[which(pool.markers$gene %in% KEGG_elo$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_elo$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_elo$gene)
+#FA oxydation
+  KEGG_oxy <- KEGG[which(KEGG$Function == "FA oxydation"),]
+  pool_oxy <- pool.markers[which(pool.markers$gene %in% KEGG_oxy$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_oxy$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_oxy$gene)
+#PPP
+  KEGG_PPP <- KEGG[which(KEGG$Function == "PPP"),]
+  pool_PPP <- pool.markers[which(pool.markers$gene %in% KEGG_PPP$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_PPP$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_PPP$gene)
+#1C metab
+  KEGG_1C <- KEGG[which(KEGG$Function == "1C metab"),]
+  pool_1C <- pool.markers[which(pool.markers$gene %in% KEGG_1C$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_1C$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_1C$gene)
+#Ala asp glu
+  KEGG_Ala <- KEGG[which(KEGG$Function == "Ala asp glu"),]
+  pool_Ala <- pool.markers[which(pool.markers$gene %in% KEGG_Ala$FBgn),]
+  tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_Ala$gene)), assay = "RNA")    
+   DoHeatmap(tumor_seurat, features = pool_Ala$gene)
+   
+#All
+pool_All <- pool.markers[which(pool.markers$gene %in% KEGG$FBgn),]
+tumor_seurat <- ScaleData(tumor_seurat, features=as.character(unique(pool_All$gene)), assay = "RNA")    
+DoHeatmap(tumor_seurat, features = pool_All$gene)   
+   
+```
