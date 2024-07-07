@@ -24,3 +24,5 @@ Metabolic-based Polyclonality in a Drosophila Intestinal Tumor Model
 - "Glutathion macor_for_vn_V2.ijm" is the macro used for redox sensors (e.g. Cyto- and Mito-glutathione sensors);
 
 - "pHluorinSE macro_for_vn_V2.ijm" is the macro used for pH sensor (e.g. pHluorinSE).
+
+Note: to improve the image quality, the pictures presented in the article were processed manually, and brightness and contrasts were enhanced if necessary.
