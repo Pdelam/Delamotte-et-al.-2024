@@ -5,6 +5,8 @@ Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
 
 - "scRNAseq Notebook for resource.Rmd" gathers all the R sessions written to analyze the sequenced tumors. The code has been uploaded the same way it was used on the machine that processed the samples (working directories will have to be changed and packages may slightly differ);
 
+- "R script for FigS6" is a short code that was used to generate the DotPlot of FigS6;
+
 - "mitogenes.csv" corresponds to the mitochondrial genes ID used for quality control as these are not implemented for Drosophila in standard Seurat procedures;
 
 - "pool gene list.csv" corresponds to the list of all cluster marker genes found differentially expressed in the pool of tumors (once all individual tumor samples have been merged);
@@ -12,6 +14,8 @@ Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
 - "KEGG.csv" and "METAB.csv" correspond to KEGG pathway gene lists (https://www.genome.jp/kegg/brite.html) and Flybase metabolic gene lists (http://flybase.org/) used for reference;
 
 - "ULTIMATE.csv" is the shortest metabolic gene list that was selected according to our observations on "METAB.csv" and "pool gene list.csv";
+
+- "FACS.csv" is the list of genes presented in Fig2 and some additional ones that are related;
 
 - "GO BP pool.csv", "GO CC pool.csv" and "GO MF pool.csv" are the details of the biological process, cellular component, and molecular function analysis performed on the pool of tumors.
 
@@ -27,4 +31,4 @@ Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
 
 - "pHluorinSE macro_for_vn_V2.ijm" is the macro used for the pH sensor (e.g. pHluorinSE).
 
-Note: to improve the image quality, the pictures presented in the article were processed manually, and brightness and contrast were enhanced if necessary.
+Note: to improve the image quality, the pictures presented in the article were processed the same way but manually: brightness & contrast were enhanced if necessary and figures could be cropped to emphasize on particular regions.
