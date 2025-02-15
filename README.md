@@ -1,5 +1,5 @@
 # Delamotte-et-al.-2024
-Metabolic-based Polyclonality in a Drosophila Intestinal Tumor Model
+Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
 
 #Single-cell RNAseq data#
 
