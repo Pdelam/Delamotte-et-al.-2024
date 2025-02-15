@@ -1,4 +1,4 @@
-# Delamotte-et-al.-2024
+# Delamotte-et-al.-2025
 Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
 
 #Single-cell RNAseq data#
