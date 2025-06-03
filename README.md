@@ -29,10 +29,23 @@ Polyclonality and Metabolic Heterogeneity in a Colorectal Tumor Model
 
 - "Glutathion macor_for_vn_V2.ijm" is the macro used for redox sensors (e.g. Cyto- and Mito-glutathione sensors);
 
-- "pHluorinSE macro_for_vn_V2.ijm" is the macro used for the pH sensor (e.g. pHluorinSE).
+- "pHluorinSE macro_for_vn_V2.ijm" is the macro used for the pH sensor (e.g. pHluorinSE);
+
+- "Project sensors.pzfx" gathers all trials with sensor data. In the data table "Ratios" are all numerical values raw intensities measured on Fiji, each column indicating the sensor and its independant replicate. These data were used for the Fig. 5. 
 
 Note: to improve the image quality, the pictures presented in the article were processed the same way but manually: brightness & contrast were enhanced if necessary and figures could be cropped to emphasize on particular regions.
 
 #Flow cytometry#
 
--
+- "FACS data_Graphpad.pzfx" contains all the processed data and graphs obtained by cytometry (i.e. the metabolic screen in Fig. 2 and Fig. 7A). The numerical values are the GFP percentage in each sample (1 sample = 5 whole midguts and Malpighian tubules). Here, male and female flies are pooled together since seperate male/female analysis did not reveal statistical differences.
+
+#Cell motility#
+
+- "Flybow motility final analysis.pzfx" regroups the raw data obtained by TrackMate on Fiji. After data analysis, a cutoff at 2h30 was applied to all replicates and conditions since it maximized the number of consecutive valid timepoints without losses and removed zero biases. These data were used for Fig.7.
+
+#Polyclonality#
+
+-"Flybow Polyclonality.csv" gathers all refined microscopy data, which was used to develop the probabilistic model. Since such data is heavy, images and raw data can be asked until a reasonable amount of time after which the data could be erased.
+
+/!\ PLEASE NOTE: More generally, additional data (microscopy images, films, genomic tables, raw tables, etc.) can be asked and excpected until a certain delay after which some of this data might be either compressed or partially erased, rendering its access limited or impossible.
+
