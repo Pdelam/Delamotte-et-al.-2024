@@ -47,5 +47,5 @@ Note: to improve the image quality, the pictures presented in the article were p
 
 -"Flybow Polyclonality.csv" gathers all refined microscopy data, which was used to develop the probabilistic model. Since such data is heavy, images and raw data can be asked until a reasonable amount of time after which the data could be erased.
 
-/!\ PLEASE NOTE: More generally, additional data (microscopy images, films, genomic tables, raw tables, etc.) can be asked and expected until a certain delay after which some of this data might be either compressed or partially erased, rendering its access limited or impossible.
+/!\ PLEASE NOTE: More generally, additional data (microscopy images, films, genomic tables, raw tables, etc.) can be asked and expected until a certain delay after which some of it might be either compressed or partially erased, rendering its access limited or impossible.
 
