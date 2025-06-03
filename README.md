@@ -1,5 +1,5 @@
 # Delamotte-et-al.-2025
-Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
+Polyclonality and Metabolic Heterogeneity in a Colorectal Tumor Model
 
 #Single-cell RNAseq data#
 
@@ -32,3 +32,7 @@ Strong Metabolic Heterogeneity and Polyclonality in a Colorectal Tumor Model
 - "pHluorinSE macro_for_vn_V2.ijm" is the macro used for the pH sensor (e.g. pHluorinSE).
 
 Note: to improve the image quality, the pictures presented in the article were processed the same way but manually: brightness & contrast were enhanced if necessary and figures could be cropped to emphasize on particular regions.
+
+#Flow cytometry#
+
+-
