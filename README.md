@@ -41,7 +41,8 @@ Note: to improve the image quality, the pictures presented in the article were p
 
 #Cell motility#
 
-- "Flybow motility final analysis.pzfx" regroups the raw data obtained by TrackMate on Fiji. After data analysis, a cutoff at 2h30 was applied to all replicates and conditions since it maximized the number of consecutive valid timepoints without losses and removed zero biases. These data were used for Fig.7.
+- "Flybow motility final analysis.pzfx" regroups the raw data obtained by TrackMate on Fiji. After data analysis, a cutoff at 2h30 was applied to all replicates and conditions since it maximized the number of consecutive valid timepoints without losses and removed zero biases.
+- "Motility.pzfx" gathers refined data from the forementionned file. These data were used for Fig.7.
 
 #Polyclonality#
 
